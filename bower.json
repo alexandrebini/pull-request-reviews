@@ -1,0 +1,28 @@
+{
+  "name": "pull_reviewer",
+  "version": "0.0.0",
+  "homepage": "https://github.com/adrianotadao/pull_reviewer",
+  "authors": [
+    "Adriano Tadao <drianotadao@gmail.com>"
+  ],
+  "keywords": [
+    "pull",
+    "pullrequest"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "underscore": "*",
+    "backbone": "*",
+    "backbone.marionette": "*",
+    "bootstrap": "*"
+  }
+}
