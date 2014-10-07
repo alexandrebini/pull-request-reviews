@@ -15,8 +15,7 @@ module.exports = function(lineman) {
         "vendor/js/backbone/backbone.js",
         "vendor/js/backbone.babysitter/lib/backbone.babysitter.js",
         "vendor/js/backbone.wreqres/lib/backbone.wreqres.js",
-        "vendor/js/backbone.wreqres/lib/backbone.wreqres.js",
-        "vendor/js/marionette/lib/backbone.marionette.js",
+        "vendor/js/backbone.marionette/lib/backbone.marionette.js",
         "vendor/js/boostrap/dist/js/boostrap.js"
       ]
     },
