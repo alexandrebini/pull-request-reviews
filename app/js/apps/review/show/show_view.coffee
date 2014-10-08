@@ -4,8 +4,9 @@
     regions:
       filesRegion: '.files'
 
-  class Show.FileView extends Marionette.ItemView
-    template: 'review/show/file'
+  class Show.FileView extends Marionette.CompositeView
+    template: 'review/show/file_layout'
+    childViewContainer: 'lines_content'
 
   class Show.FilesView extends Marionette.CollectionView
     childView: Show.FileView
