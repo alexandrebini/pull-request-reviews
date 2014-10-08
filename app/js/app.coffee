@@ -8,7 +8,7 @@
     @startHistory()
 
   App.addInitializer ->
-    console.log 'fooooooo'
+    App.module('ReviewApp').start()
 
   App.commands.setHandler 'register:instance', (instance, id) ->
     App.register instance, id if App.environment is 'development'

@@ -1,5 +1,5 @@
-do (Marionette) ->
-  _.extend Marionette.Application::,
+do (Backbone) ->
+  _.extend Backbone.Marionette.Application::,
     startHistory: ->
       Backbone.history.start({ pushState: true })
 

@@ -8,5 +8,5 @@ do (Marionette) ->
     path(data)
 
   getTemplate: (templateName) ->
-    path = "app/templates/#{ templateName }"
+    path = "app/templates/#{ templateName }.haml"
     return JST[path] if JST[path]

@@ -3,12 +3,16 @@
 
   class ReviewApp.Router extends Marionette.AppRouter
     appRoutes:
-      'pull-requests' : 'show'
+      '/pull-requests/:id/' : 'show'
 
   API =
     start: ->
-      @route = new ReviewApp.Router
+      new ReviewApp.Router
         controller: API
+
+    show: (id) ->
+      new ReviewApp.Show.Controller(id)
 
   ReviewApp.on 'start', ->
     API.start()
+    API.show(1)
