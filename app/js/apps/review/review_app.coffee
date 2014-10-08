@@ -11,6 +11,7 @@
         controller: API
 
     show: (id) ->
+      console.log 'shoew'
       pullRequest = App.request 'pull:request:entity', id
       @showControler.destroy() if @showControler?
       @showController = new ReviewApp.Show.Controller(pullRequest)
