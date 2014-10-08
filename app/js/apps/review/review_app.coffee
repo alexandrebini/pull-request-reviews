@@ -11,7 +11,18 @@
         controller: API
 
     show: (id) ->
-      new ReviewApp.Show.Controller(id)
+      console.log 'shoew'
+      pullRequest = App.request 'pull:request:entity', id
+      @showControler.destroy() if @showControler?
+      @showController = new ReviewApp.Show.Controller(pullRequest)
+      App.vent.trigger 'pull:request:visited', pullRequest
+
+    shortcuts: (pullRequest) ->
+      @shortcutsControler.destroy() if @shortcutsControler?
+      @shortcutsController = new ReviewApp.Shortcuts.Controller(pullRequest)
 
   ReviewApp.on 'start', ->
     API.start()
+
+  App.vent.on 'pull:request:visited', (pullRequest) ->
+    API.shortcuts(pullRequest)
