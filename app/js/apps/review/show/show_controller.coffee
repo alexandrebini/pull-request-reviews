@@ -4,7 +4,6 @@
       @layout = @getLayout()
       @pullRequest = pullRequest
 
-
       @listenTo @layout, 'show', =>
         App.execute 'when:fetched', @pullRequest, =>
           @pullRequestRegion()

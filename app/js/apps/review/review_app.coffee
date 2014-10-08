@@ -3,7 +3,7 @@
 
   class ReviewApp.Router extends Marionette.AppRouter
     appRoutes:
-      '/pull-requests/:id/' : 'show'
+      'pull-requests/:id/' : 'show'
 
   API =
     start: ->
@@ -11,17 +11,17 @@
         controller: API
 
     show: (id) ->
-      @pullRequest = App.request 'pull:request:entity', id
-      @showControler.destroy() if @controller?
-      @showController = new ReviewApp.Show.Controller(@pullRequest)
-      App.vent.trigger 'pull:request:visited', @pullRequest
+      pullRequest = App.request 'pull:request:entity', id
+      @showControler.destroy() if @showControler?
+      @showController = new ReviewApp.Show.Controller(pullRequest)
+      App.vent.trigger 'pull:request:visited', pullRequest
 
     shortcuts: (pullRequest) ->
-      @shortcutsControler.destroy() if @controller?
-      @shortcutsController = new ReviewApp.Shortcuts.Controller(@pullRequest)
+      @shortcutsControler.destroy() if @shortcutsControler?
+      @shortcutsController = new ReviewApp.Shortcuts.Controller(pullRequest)
 
   ReviewApp.on 'start', ->
     API.start()
 
   App.vent.on 'pull:request:visited', (pullRequest) ->
-    console.log 'pul request visited'
+    API.shortcuts(pullRequest)
