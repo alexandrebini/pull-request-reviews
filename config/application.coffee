@@ -3,16 +3,24 @@ module.exports = (lineman) ->
   livereload: true
   enableAssetFingerprint: true
 
-  jst:
-    compile:
-      files:
-        'generated/template/haml.js': "app/generated/templates/**/*.html"
-
-  appendTasks:
-    common: ['haml', 'jst']
+  haml:
+    templates:
+      options:
+        target: 'js'
+        language: 'coffee'
+        includePath: true
+      files: [
+        {
+          expand: true,
+          cwd:    "app/templates",
+          src:    ["**/*.haml"],
+          dest:   "generated/template/",
+          ext:    ".js"
+        }
+      ]
 
   removeTasks:
-    common: ['less', 'pages:dev']
+    common: ['less', 'handlebars', 'pages:dev', 'jst']
     dist: ['pages:dist']
 
   server:
