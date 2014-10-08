@@ -4,6 +4,6 @@ module.exports = (lineman) ->
   enableAssetFingerprint: true
   server:
     apiProxy:
-      enabled: false,
+      enabled: false
       host: 'localhost'
       port: 3000
