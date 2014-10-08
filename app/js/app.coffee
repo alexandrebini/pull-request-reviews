@@ -1,6 +1,9 @@
 @PullRequestsReviews = do (Backbone, Marionette) ->
   App = new Marionette.Application
 
+  App.on 'before:start', ->
+    App.urlOptions = {}
+
   App.addRegions
     mainRegion: 'main'
 

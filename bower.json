@@ -23,6 +23,7 @@
     "underscore": "*",
     "backbone": "*",
     "backbone.marionette": "*",
-    "bootstrap": "*"
+    "bootstrap": "*",
+    "backbone-associations": "*"
   }
 }
