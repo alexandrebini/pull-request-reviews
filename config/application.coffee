@@ -20,8 +20,8 @@ module.exports = (lineman) ->
       ]
 
   removeTasks:
-    common: ['less', 'handlebars', 'pages:dev', 'jst']
-    dist: ['pages:dist']
+    common: ['less', 'handlebars', 'pages:dev', 'jst', 'jshint']
+    dist: ['pages:dist', 'jshint']
 
   server:
     apiProxy:
