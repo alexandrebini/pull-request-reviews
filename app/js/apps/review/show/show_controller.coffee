@@ -1,8 +1,8 @@
 @PullRequestsReviews.module 'ReviewApp.Show', (Show, App, Backbone, Marionette, $, _) ->
   class Show.Controller extends Marionette.Controller
-    initialize: (id) ->
+    initialize: (pullRequest) ->
       @layout = @getLayout()
-      @pullRequest = App.request 'pull:request:entity', id
+      @pullRequest = pullRequest
 
       App.execute 'when:fetched', @pullRequest, =>
         console.log 'pullRequest ', @pullRequest
