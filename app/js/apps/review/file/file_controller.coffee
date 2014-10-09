@@ -3,7 +3,6 @@
     initialize: (file) ->
       @model = file
       @collection = file.get('lines')
-
       @view = @fileRegion()
 
     fileRegion: ->
