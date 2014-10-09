@@ -20,8 +20,8 @@
   ],
   "dependencies": {
     "backbone": "*",
-    "backbone-associations": "*",
     "backbone.marionette": "*",
+    "backbone.mutators": "*",
     "bootstrap": "*",
     "bootstrap": "*",
     "jquery": "*",
