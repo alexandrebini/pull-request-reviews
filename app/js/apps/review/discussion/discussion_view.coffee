@@ -5,4 +5,5 @@
 
   class Discussion.DiscussionsView extends Marionette.CollectionView
     childView: Discussion.DiscussionView
-    tagNmae: 'ul'
+    tagName: 'ul'
+    className: 'discussion'

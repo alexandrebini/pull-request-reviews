@@ -6,3 +6,4 @@
 
   class Show.FilesView extends Marionette.CollectionView
     childView: Marionette.ItemView
+    className: 'files'

@@ -7,3 +7,4 @@
     template: 'files/show'
     childViewContainer: '.lines-container'
     tagName: 'section'
+    className: 'file'
