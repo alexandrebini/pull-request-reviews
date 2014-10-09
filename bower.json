@@ -19,11 +19,12 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "*",
-    "underscore": "*",
     "backbone": "*",
     "backbone.marionette": "*",
+    "backbone.mutators": "*",
     "bootstrap": "*",
-    "backbone-associations": "*"
+    "jquery": "*",
+    "mousetrap": "*",
+    "underscore": "*"
   }
 }

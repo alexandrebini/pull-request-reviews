@@ -20,3 +20,6 @@
     App.unregister instance, id if App.environment is 'development'
 
   App
+
+$(document).ready ->
+  PullRequestsReviews.start()

@@ -28,7 +28,9 @@ module.exports = (lineman) ->
     dist: ['pages:dist', 'jshint']
 
   server:
+    pushState: true
     apiProxy:
       enabled: false
       host: 'localhost'
       port: 3000
+      prefix: 'api'
