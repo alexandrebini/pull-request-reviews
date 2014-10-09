@@ -23,7 +23,6 @@
     "backbone.marionette": "*",
     "backbone.mutators": "*",
     "bootstrap": "*",
-    "bootstrap": "*",
     "jquery": "*",
     "mousetrap": "*",
     "underscore": "*"
