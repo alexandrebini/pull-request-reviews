@@ -24,7 +24,7 @@
       @layout.discussionsRegion.show view
 
     getReviewView: ->
-      console.log 'chamar aqui o review'
+      # console.log 'chamar aqui o review'
 
     getCodeView: ->
       new Line.CodeView
