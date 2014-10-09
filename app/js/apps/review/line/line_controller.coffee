@@ -5,9 +5,9 @@
       @layout = @getLayout()
 
       @listenTo @layout, 'show', =>
-        @reviewRegion()
-        @codeRegion()
-        @discussionRegion()
+        #@reviewRegion()
+        #@codeRegion()
+        #@discussionRegion()
 
     getLayout: ->
       new Line.Layout()
@@ -31,7 +31,8 @@
         model: @model
 
     getDiscussionView: ->
-      App.request 'discussions:wrapper', @model.get('discussions')
+      console.log @model.get('discussions').first()
+      #App.request 'discussions:wrapper', @model.get('discussions').first()
 
   App.reqres.setHandler 'line:wrapper', (line) ->
     controller = new Line.Controller(line)
