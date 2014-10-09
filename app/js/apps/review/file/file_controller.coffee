@@ -14,7 +14,6 @@
         if _.isEqual(File.EmptyView, ChildViewClass)
           _buildChildView(child, ChildViewClass, childViewOptions)
         else
-          console.log child
           App.request 'line:wrapper', child
 
       fileView

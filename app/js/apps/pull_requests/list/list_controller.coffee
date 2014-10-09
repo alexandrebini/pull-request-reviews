@@ -13,7 +13,7 @@
     pullRequestsRegion: ->
       pullRequestsView = @getPullRequestsView()
 
-      @listenTo pullRequestsView, 'pull:request:clicked', (child) =>
+      @listenTo pullRequestsView, 'childview:pull:request:clicked', (child) =>
         App.vent.trigger 'visit:pull:request', child.model.get('id')
 
       @layout.listRegion.show pullRequestsView
