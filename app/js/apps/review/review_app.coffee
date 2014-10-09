@@ -23,5 +23,9 @@
   ReviewApp.on 'start', ->
     API.start()
 
+  App.vent.on 'visit:pull:request', (id) ->
+    API.show(id)
+
   App.vent.on 'pull:request:visited', (pullRequest) ->
     API.shortcuts(pullRequest)
+

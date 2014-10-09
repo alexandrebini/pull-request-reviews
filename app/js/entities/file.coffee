@@ -9,7 +9,7 @@
         @get('currentLine') == null
 
     parse: (response) ->
-      @set lines: new Entities.Lines(response.lines, { parse: true })
+      @set lines: new Entities.Lines(response.lines, parse: true)
       delete response.lines
       response
 

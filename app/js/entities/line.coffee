@@ -6,10 +6,12 @@
 
     parse: (response) ->
       @set
-        reviews: new Entities.Reviews(response.reviews)
-        discussions: new Entities.Discussions(response.discussions)
+        reviews: new Entities.Reviews(response.reviews, parse: true)
+        discussions: new Entities.Discussions(response.discussions, parse: true)
+
       delete response.reviews
       delete response.discussions
+
       response
 
     review: (type) ->
