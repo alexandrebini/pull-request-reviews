@@ -1,8 +1,11 @@
 @PullRequestsReviews.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
   class Entities.PullRequest extends Backbone.Model
     urlRoot: '/api/pull_requests'
-    defaults:
-      currentFile: undefined
+
+    mutators:
+      currentFile: ->
+        _.find @get('files').models, (line) ->
+          line.get('reviewed') == false
 
     parse: (response) ->
       @set files: new Entities.Files(response.files, parse: true)

@@ -24,7 +24,8 @@
     acceptLine: (e) ->
       e.preventDefault() if e && e.preventDefault
       console.log 'accept line'
-      # @model.currentFile.currentLine.reviews.add new Review(type: 'accept')
+      console.log 'currentFile', @pullRequest.get('currentFile')
+      console.log 'currentLine', @pullRequest.get('currentFile').get('currentLine')
 
     # press "cmd + A"
     acceptFile: (e) ->
