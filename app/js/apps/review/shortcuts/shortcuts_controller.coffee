@@ -45,8 +45,7 @@
     # press "?"
     startDiscussion: (e) ->
       e.preventDefault() if e && e.preventDefault
-      console.log 'start discussion'
-      # @model.currentFile.currentLine.discussion.add new Discussion()
+      App.execute 'line:start:discussion', @pullRequest.get('currentFile').get('currentLine')
 
     onDestroy: ->
       @unbindKeys()

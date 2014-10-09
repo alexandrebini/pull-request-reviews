@@ -36,3 +36,6 @@
   App.reqres.setHandler 'line:wrapper', (line) ->
     controller = new Line.Controller(line)
     controller.layout
+
+  App.commands.setHandler 'line:start:discussion', (currentLine) ->
+    currentLine.get('discussions').add new App.Entities.Discussion()
