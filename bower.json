@@ -24,6 +24,7 @@
     "backbone": "*",
     "backbone.marionette": "*",
     "bootstrap": "*",
-    "backbone-associations": "*"
+    "backbone-associations": "*",
+    "mousetrap": "*"
   }
 }
