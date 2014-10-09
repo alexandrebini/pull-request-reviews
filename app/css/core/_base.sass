@@ -1,15 +1,36 @@
 // *************************************
 //
 //   Base
+//   -> Base-level tags (body, p, etc.)
 //
 // *************************************
 
 html
+  font-size: $base-fontSize
+
+body
   background: $base-background
   color: $base-color
   font-family: $base-fontFamily
-  font-size: $base-fontSize
+  font-size: 100%
   line-height: $base-lineHeight
 
-body
-  font-size: 100%
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4
+  margin: 0
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a
+  text-decoration: none
+
+*, *:before, *:after
+  box-sizing: border-box
