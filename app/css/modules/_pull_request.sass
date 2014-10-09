@@ -1,0 +1,48 @@
+#pull-request
+  .header
+    border-left: 2px solid #61C1A1
+    padding-left: 15px
+    margin-top: 15px
+  .project-title
+    font-family: Lato Thin, Arial, serif
+  .title
+
+  .menu
+    border-bottom: 1px solid #6DD8B5
+    padding: 10px
+    margin-top: 15px
+    li
+      cursor: pointer
+      display: inline-block
+      height: 31px
+      font-family: Lato Thin, Arial, serif
+      padding: 5px
+      position: relative
+      text-align: center
+      width: 100px
+      border-right: 1px solid #6DD8B5
+      &:last-child
+        border: none
+      &.selected, &:hover
+        &:after
+          content: ''
+          position: absolute
+          bottom: -11px
+          margin: 0 auto
+          left: 46%
+          width: 0
+          height: 0
+          border-bottom: 8px solid #FFFFFF
+          border-right: 8px solid transparent
+          border-left: 7px solid transparent
+        &:before
+          content: ''
+          position: absolute
+          bottom: -10px
+          margin: 0 auto
+          left: 45%
+          width: 0
+          height: 0
+          border-bottom: 8px solid #6DD8B5
+          border-right: 8px solid transparent
+          border-left: 8px solid transparent
