@@ -7,6 +7,7 @@ module.exports = (lineman) ->
       'vendor/js/backbone.babysitter/lib/backbone.babysitter.js'
       'vendor/js/backbone.wreqres/lib/backbone.wreqres.js'
       'vendor/js/backbone.marionette/lib/backbone.marionette.js'
+      'vendor/js/backbone.mutators/backbone.mutators.js'
       'vendor/js/boostrap/dist/js/boostrap.js'
       'vendor/js/mousetrap/mousetrap.js'
     ]

@@ -1,5 +1,9 @@
 @PullRequestsReviews.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
   class Entities.Line extends Backbone.Model
+    mutators:
+      reviewed: ->
+        @get('reviews').length > 0
+
     parse: (response) ->
       @set
         reviews: new Entities.Reviews(response.reviews)
