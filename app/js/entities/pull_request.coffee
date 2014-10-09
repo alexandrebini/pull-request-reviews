@@ -2,6 +2,11 @@
   class Entities.PullRequest extends Backbone.Model
     urlRoot: '/api/pull_requests'
 
+    mutators:
+      currentFile: ->
+        _.find @get('files').models, (line) ->
+          line.get('reviewed') == false
+
     parse: (response) ->
       @set files: new Entities.Files(response.files, parse: true)
       delete response.files
@@ -17,5 +22,13 @@
       pullRequest.fetch()
       pullRequest
 
+    getPullRequests: ->
+      pullRequests = new Entities.PullRequests()
+      pullRequests.fetch()
+      pullRequests
+
   App.reqres.setHandler 'pull:request:entity', (id) ->
     API.getPullRequest(id)
+
+  App.reqres.setHandler 'pull:request:entities', ->
+    API.getPullRequests()

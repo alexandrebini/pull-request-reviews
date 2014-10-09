@@ -1,7 +1,7 @@
 do (Backbone) ->
   _.extend Backbone.Marionette.Application::,
     startHistory: ->
-      Backbone.history.start({ pushState: false })
+      Backbone.history.start({ pushState: true })
 
     register: (instance, id) ->
       @_registry ?= {}

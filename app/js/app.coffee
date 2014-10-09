@@ -11,6 +11,7 @@
     @startHistory()
 
   App.addInitializer ->
+    App.module('PullRequestsApp').start()
     App.module('ReviewApp').start()
 
   App.commands.setHandler 'register:instance', (instance, id) ->
@@ -20,3 +21,6 @@
     App.unregister instance, id if App.environment is 'development'
 
   App
+
+$(document).ready ->
+  PullRequestsReviews.start()
