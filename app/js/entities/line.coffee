@@ -8,5 +8,8 @@
       delete response.discussions
       response
 
+    review: (type) ->
+      @get('reviews').add new Entities.Review(type: type)
+
   class Entities.Lines extends Backbone.Collection
     model: Entities.Line

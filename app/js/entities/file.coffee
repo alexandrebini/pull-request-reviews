@@ -5,5 +5,8 @@
       delete response.lines
       response
 
+    rewiew: (type) ->
+      @get('lines').each (line) -> line.review(type)
+
   class Entities.Files extends Backbone.Collection
     model: Entities.File
