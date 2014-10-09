@@ -11,4 +11,4 @@ module.exports = (lineman) ->
     ]
 
   sass:
-    main: 'app/css/*.{scss,sass}'
+    main: 'app/css/app.{scss,sass}'
