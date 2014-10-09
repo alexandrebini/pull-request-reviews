@@ -1,7 +1,7 @@
 @PullRequestsReviews.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
   class Entities.File extends Backbone.Model
     parse: (response) ->
-      @set lines: new Entities.Lines(response.lines)
+      @set lines: new Entities.Lines(response.lines, parse: true)
       delete response.lines
       response
 

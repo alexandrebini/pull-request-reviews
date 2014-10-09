@@ -5,7 +5,7 @@
       currentFile: undefined
 
     parse: (response) ->
-      @set files: new Entities.Files(response.files)
+      @set files: new Entities.Files(response.files, parse: true)
       delete response.files
       response
 
@@ -19,5 +19,13 @@
       pullRequest.fetch()
       pullRequest
 
+    getPullRequests: ->
+      pullRequests = new Entities.PullRequests()
+      pullRequests.fetch()
+      pullRequests
+
   App.reqres.setHandler 'pull:request:entity', (id) ->
     API.getPullRequest(id)
+
+  App.reqres.setHandler 'pull:request:entities', ->
+    API.getPullRequests()
