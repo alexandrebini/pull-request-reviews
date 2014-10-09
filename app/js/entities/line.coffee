@@ -2,10 +2,12 @@
   class Entities.Line extends Backbone.Model
     parse: (response) ->
       @set
-        reviews: new Entities.Reviews(response.reviews)
-        discussions: new Entities.Discussions(response.discussions)
+        reviews: new Entities.Reviews(response.reviews, parse: true)
+        discussions: new Entities.Discussions(response.discussions, parse: true)
+
       delete response.reviews
       delete response.discussions
+
       response
 
   class Entities.Lines extends Backbone.Collection

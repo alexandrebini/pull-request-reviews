@@ -6,15 +6,23 @@
 
       @listenTo @layout, 'show', =>
         App.execute 'when:fetched', @pullRequest, =>
-          @pullRequestRegion()
+          @filesRegion()
 
       App.mainRegion.show @layout
 
     getLayout: ->
       new Show.Layout()
 
-    pullRequestRegion: ->
+    filesRegion: ->
       filesView = @getFilesView()
+
+      _buildChildView = filesView.buildChildView
+      filesView.buildChildView = (child, ChildViewClass, childViewOptions) ->
+        if _.isEqual(Show.EmptyView, ChildViewClass)
+          _buildChildView(child, ChildViewClass, childViewOptions)
+        else
+          App.request 'file:wrapper', child
+
       @layout.filesRegion.show filesView
 
     getFilesView: ->

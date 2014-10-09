@@ -3,7 +3,7 @@
     urlRoot: '/api/pull_requests'
 
     parse: (response) ->
-      @set files: new Entities.Files(response.files)
+      @set files: new Entities.Files(response.files, parse: true)
       delete response.files
       response
 
