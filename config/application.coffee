@@ -3,6 +3,10 @@ module.exports = (lineman) ->
   livereload: true
   enableAssetFingerprint: true
 
+  sass:
+    options:
+      bundleExec: true
+
   haml:
     templates:
       options:
