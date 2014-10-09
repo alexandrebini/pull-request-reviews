@@ -5,7 +5,7 @@
     regions:
       reviewRegion: '.review-region'
       codeRegion: '.code-region'
-      discussionRegion: '.discussion-region'
+      discussionsRegion: '.discussions-region'
 
   class Line.CodeView extends Marionette.ItemView
     template: 'lines/code'

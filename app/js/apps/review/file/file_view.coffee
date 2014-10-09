@@ -6,3 +6,4 @@
     childView: Marionette.ItemView
     template: 'files/show'
     childViewContainer: '.lines-container'
+    tagName: 'section'

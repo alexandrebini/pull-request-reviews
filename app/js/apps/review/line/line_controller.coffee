@@ -20,7 +20,8 @@
       @layout.codeRegion.show view
 
     discussionRegion: ->
-      @getDiscussionView()
+      view = @getDiscussionView()
+      @layout.discussionsRegion.show view
 
     getReviewView: ->
       console.log 'chamar aqui o review'
@@ -30,7 +31,7 @@
         model: @model
 
     getDiscussionView: ->
-      console.log 'chamar aqui a discussão'
+      App.request 'discussions:wrapper', @model.get('discussions')
 
   App.reqres.setHandler 'line:wrapper', (line) ->
     controller = new Line.Controller(line)
