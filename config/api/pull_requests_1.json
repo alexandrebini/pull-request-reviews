@@ -11,6 +11,24 @@
           "text": "+This is an awesome pull request",
           "reviews": [
             { "user_id": 1, "type": "accept" }
+          ],
+          "discussions": [
+            {
+              "id": 4,
+              "line_number": 2,
+              "user_id": 4,
+              "message": "@all Vamos na Darwin?",
+              "created_at": "2014-10-09 08:23:34",
+              "updated_at": "2014-10-09 08:23:34"
+            },
+            {
+              "id": 5,
+              "line_number": 2,
+              "user_id": 3,
+              "message": "@tegon ah cara, mas eu sou hipster. Lá não é Cool.",
+              "created_at": "2014-10-09 10:01:34",
+              "updated_at": "2014-10-09 10:01:34"
+            }
           ]
         },
         {
@@ -43,7 +61,30 @@
             { "user_id": 1, "type": "reject" }
           ],
           "discussions": [
-            { "user_id": 1, "message": "wtf?" }
+            {
+              "id": 1,
+              "line_number": 1,
+              "user_id": 1,
+              "message": "@saulo vamos remover a porcaria do Lineman?",
+              "created_at": "2014-10-06 10:23:34",
+              "updated_at": "2014-10-06 10:23:34"
+            },
+            {
+              "id": 2,
+              "line_number": 1,
+              "user_id": 5,
+              "message": "@alexandre não cara, ele é muito foda. Senão, teria que fazer tudo na mão",
+              "created_at": "2014-10-06 14:23:34",
+              "updated_at": "2014-10-06 14:23:34"
+            },
+            {
+              "id": 3,
+              "line_number": 1,
+              "user_id": 1,
+              "message": "@saulo Bem, eu acho que não vira, mas ok. #melhorSeFoceNode #apenasDizendo",
+              "created_at": "2014-10-07 15:23:34",
+              "updated_at": "2014-10-07 15:23:34"
+            }
           ]
         },
         {

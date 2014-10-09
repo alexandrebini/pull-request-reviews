@@ -34,3 +34,8 @@ module.exports = (lineman) ->
       host: 'localhost'
       port: 3000
       prefix: 'api'
+
+  watch:
+    haml:
+      files: "app/templates/**/*.haml"
+      tasks: ["haml", "concat_sourcemap:js"]
