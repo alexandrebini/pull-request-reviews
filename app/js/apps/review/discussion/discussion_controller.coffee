@@ -4,6 +4,15 @@
       @collection = discussions
       @view = @discussionView()
 
+      @listenTo @view, 'childview:cancelButton:clicked', (child) =>
+        console.log child
+
+      @listenTo @view, 'childview:deleteButton:clicked', (child) =>
+        child.destroy()
+
+      @listenTo @view, 'childview:sendButton:clicked', (child) =>
+        console.log child
+
     discussionView: ->
       new Discussion.DiscussionsView
         collection: @collection
