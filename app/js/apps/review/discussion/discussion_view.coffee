@@ -4,14 +4,26 @@
     tagName: 'li'
     ui:
       cancelButton: 'a.cancel'
-      sendButton: 'a.send'
+      editButton: 'a.edit'
       deleteButton: 'a.delete'
       message: 'p.message'
       form: 'form'
     triggers:
       'click @ui.cancelButton' : 'cancelButton:clicked'
-      'click @ui.sendButton' : 'sendButton:clicked'
+      'click @ui.editButton' : 'editButton:clicked'
       'click @ui.deleteButton' : 'deleteButton:clicked'
+      'submit' : 'form:submit'
+
+    initialize: ->
+      $(@ui.form).hide()
+
+    editMessage: ->
+      @ui.form.show()
+      @ui.message.hide()
+
+    abortEditMessage: ->
+      @ui.form.hide()
+      @ui.message.show()
 
   class Discussion.DiscussionsView extends Marionette.CollectionView
     childView: Discussion.DiscussionView
