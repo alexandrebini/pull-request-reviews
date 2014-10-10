@@ -5,15 +5,21 @@
       @layout = @getLayout()
 
       @listenTo @layout, 'show', =>
-        @reviewRegion()
+        @markersRegion()
         @codeRegion()
         @discussionRegion()
+        @numbersRegion()
 
     getLayout: ->
       new Line.Layout()
 
-    reviewRegion: ->
-      @getReviewView()
+    numbersRegion: ->
+      view = @getNumberView()
+      @layout.numbersRegion.show view
+
+    markersRegion: ->
+      view = @getMarkersView()
+      @layout.markersRegion.show view
 
     codeRegion: ->
       view = @getCodeView()
@@ -23,15 +29,20 @@
       view = @getDiscussionView()
       @layout.discussionsRegion.show view
 
-    getReviewView: ->
-      # console.log 'chamar aqui o review'
+    getMarkersView: ->
+      App.request 'markers:wrapper', @model.get('reviews')
 
     getCodeView: ->
       new Line.CodeView
         model: @model
 
+    getNumberView: ->
+      new Line.NumberView
+        model: @model
+
     getDiscussionView: ->
       App.request 'discussions:wrapper', @model.get('discussions')
+
 
   App.reqres.setHandler 'line:wrapper', (line) ->
     controller = new Line.Controller(line)

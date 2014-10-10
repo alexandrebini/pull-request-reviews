@@ -4,9 +4,13 @@
     className: 'line'
 
     regions:
-      reviewRegion: '.review-region'
+      numbersRegion: '.numbers-region'
+      markersRegion: '.markers-region'
       codeRegion: '.code-region'
       discussionsRegion: '.discussions-region'
 
   class Line.CodeView extends Marionette.ItemView
     template: 'lines/code'
+
+  class Line.NumberView extends Marionette.ItemView
+    template: 'lines/numbers'
