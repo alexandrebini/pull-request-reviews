@@ -10,7 +10,6 @@ module.exports = (lineman) ->
       'vendor/js/backbone.mutators/backbone.mutators.js'
       'vendor/js/boostrap/dist/js/boostrap.js'
       'vendor/js/mousetrap/mousetrap.js'
-      'vendor/js/moment/min/moment-with-locales.js'
     ]
 
   sass:
