@@ -28,6 +28,9 @@
           _.find files.models, (file) ->
             file.get('nextLineToReview')
 
+      href: ->
+        "/pull-requests/#{ @get('id') }/"
+
     parse: (response) ->
       @get('files').reset(response.files, parse: true)
       delete response.files

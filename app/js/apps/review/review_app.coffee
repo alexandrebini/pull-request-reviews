@@ -24,8 +24,8 @@
     API.start()
 
   App.vent.on 'visit:pull:request', (id) ->
+    App.vent.trigger 'visit', path: "/pull-requests/#{ id }/"
     API.show(id)
 
   App.vent.on 'pull:request:visited', (pullRequest) ->
     API.shortcuts(pullRequest)
-

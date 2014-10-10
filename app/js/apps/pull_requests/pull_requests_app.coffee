@@ -15,7 +15,3 @@
 
   PullRequestsApp.on 'start', ->
     API.start()
-
-  App.vent.on 'visit:pull:request', (id) ->
-    App.vent.trigger 'visit', path: "/pull-requests/#{ id }/"
-    App.vent.trigger 'pull:request:visited'
