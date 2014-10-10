@@ -1,6 +1,6 @@
 @PullRequestsReviews.module 'ReviewApp.Discussion', (Discussion, App, Backbone, Marionette, $, _) ->
-  class Discussion.Layout extends Marionette.Layout
-    template: 'discussions/layout'
+  class Discussion.Layout extends Marionette.LayoutView
+    template: 'discussion/layout'
     className: 'discussion'
 
     regions:

@@ -1,26 +1,13 @@
-# @PullRequestsReviews.module 'ReviewApp.Discussion', (Discussion, App, Backbone, Marionette, $, _) ->
-#   class Discussion.Controller extends Marionette.Controller
-#     initialize: (discussion)->
-#       #@collection = discussions
-#       #@view = @discussionView()
-#       # @model = discussion
-#       # @layout = @getLayout()
-#       # @listenTo @layout, 'show', =>
-#       #   @discussionRegion()
+@PullRequestsReviews.module 'ReviewApp.Discussion', (Discussion, App, Backbone, Marionette, $, _) ->
+  class Discussion.Controller extends Marionette.Controller
+    initialize: (discussions) ->
+      @collection = discussions
+      @view = @discussionView()
 
-#     getLayout: ->
-#       new Discussion.Layout()
+    discussionView: ->
+      new Discussion.DiscussionsView
+        collection: @collection
 
-#     discussionRegion: ->
-#       view = @getDiscussionView()
-#       @layout.messageRegion.show view
-
-#     getDiscussionView: ->
-#       # new Discussion.DiscussionsView
-#       #   collection: @collection
-#       new Discussion.DiscussionView
-#         model: @model
-
-#   App.reqres.setHandler 'discussions:wrapper', (discussion) ->
-#     controller = new Discussion.Controller(discussion)
-#     controller.layout
+  App.reqres.setHandler 'discussions:wrapper', (discussions) ->
+    controller = new Discussion.Controller(discussions)
+    controller.view
