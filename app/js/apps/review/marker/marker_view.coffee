@@ -1,11 +1,10 @@
 @PullRequestsReviews.module 'ReviewApp.Marker', (Marker, App, Backbone, Marionette, $, _) ->
   class Marker.Maker extends Marionette.CompositeView
-    template: false
+    template: 'markers/marker'
     tagName: 'span'
-    className: ->
-      @model.get('type')
+    className: -> @model.get('type')
 
   class Marker.Makers extends Marionette.CompositeView
     childView: Marker.Maker
     template: 'markers/layout'
-    childViewContainer: '.marker-region'
+    childViewContainer: '.markers'

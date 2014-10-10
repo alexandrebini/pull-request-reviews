@@ -4,14 +4,17 @@
       @collection = discussions
       @view = @discussionView()
 
+      @listenTo @view, 'childview:editButton:clicked', (child) =>
+        child.editMessage()
+
+      @listenTo @view, 'childview:form:submit', (child) =>
+        console.log 'submit'
+
       @listenTo @view, 'childview:cancelButton:clicked', (child) =>
-        console.log child
+        child.abortEditMessage()
 
       @listenTo @view, 'childview:deleteButton:clicked', (child) =>
         child.destroy()
-
-      @listenTo @view, 'childview:sendButton:clicked', (child) =>
-        console.log child
 
     discussionView: ->
       new Discussion.DiscussionsView
