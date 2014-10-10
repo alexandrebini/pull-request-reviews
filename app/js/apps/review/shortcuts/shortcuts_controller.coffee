@@ -54,7 +54,7 @@
     # press "?"
     startDiscussion: (e) ->
       e.preventDefault() if e && e.preventDefault
-      App.execute 'line:start:discussion', @pullRequest.get('currentFile').get('currentLine')
+      App.execute 'line:start:discussion', @currentLine
 
     onDestroy: ->
       @unbindKeys()
