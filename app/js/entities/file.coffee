@@ -13,7 +13,13 @@
       delete response.lines
       response
 
-    rewiew: (type) ->
+    accept: ->
+      @review 'accept'
+
+    reject: ->
+      @review 'reject'
+
+    review: (type) ->
       @get('lines').each (line) -> line.review(type)
 
   class Entities.Files extends Backbone.Collection

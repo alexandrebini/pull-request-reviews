@@ -1,0 +1,296 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'lineman' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'lineman', null ]
+6 verbose cache add name=undefined spec="lineman" args=["lineman",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'lineman',
+7 verbose parsed url   path: 'lineman',
+7 verbose parsed url   href: 'lineman' }
+8 silly lockFile ede4bb72-lineman lineman
+9 verbose lock lineman /home/danilo/.npm/ede4bb72-lineman.lock
+10 silly lockFile ede4bb72-lineman lineman
+11 silly lockFile ede4bb72-lineman lineman
+12 verbose addNamed [ 'lineman', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile ea700902-lineman lineman@
+15 verbose lock lineman@ /home/danilo/.npm/ea700902-lineman.lock
+16 silly addNameRange { name: 'lineman', range: '*', hasData: false }
+17 verbose request where is /lineman
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id f370de7a803ae7de
+20 verbose url raw /lineman
+21 verbose url resolving [ 'https://registry.npmjs.org/', './lineman' ]
+22 verbose url resolved https://registry.npmjs.org/lineman
+23 verbose request where is https://registry.npmjs.org/lineman
+24 info trying registry request attempt 1 at 20:17:48
+25 verbose etag "WJYT4TZ0PRGTEU2ZZNJJPQTY"
+26 http GET https://registry.npmjs.org/lineman
+27 http 304 https://registry.npmjs.org/lineman
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Wed, 08 Oct 2014 23:17:40 GMT',
+28 silly registry.get     server: 'Apache',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'last-modified': 'Wed, 08 Oct 2014 23:17:40 GMT',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     etag: '"WJYT4TZ0PRGTEU2ZZNJJPQTY"',
+28 silly registry.get     'x-served-by': 'cache-atl6230-ATL',
+28 silly registry.get     'x-cache': 'HIT',
+28 silly registry.get     'x-cache-hits': '1',
+28 silly registry.get     'x-timer': 'S1412810260.822290,VS0,VE163',
+28 silly registry.get     vary: 'Accept',
+28 silly registry.get     'content-length': '0',
+28 silly registry.get     'keep-alive': 'timeout=10, max=50',
+28 silly registry.get     connection: 'Keep-Alive' } ]
+29 verbose etag https://registry.npmjs.org/lineman from cache
+30 silly addNameRange number 2 { name: 'lineman', range: '*', hasData: true }
+31 silly addNameRange versions [ 'lineman',
+31 silly addNameRange   [ '0.0.1',
+31 silly addNameRange     '0.0.2',
+31 silly addNameRange     '0.0.3',
+31 silly addNameRange     '0.0.4',
+31 silly addNameRange     '0.0.5',
+31 silly addNameRange     '0.1.0',
+31 silly addNameRange     '0.1.1',
+31 silly addNameRange     '0.1.2',
+31 silly addNameRange     '0.1.3',
+31 silly addNameRange     '0.1.4',
+31 silly addNameRange     '0.1.5',
+31 silly addNameRange     '0.1.6',
+31 silly addNameRange     '0.1.7',
+31 silly addNameRange     '0.1.8',
+31 silly addNameRange     '0.1.9',
+31 silly addNameRange     '0.2.0',
+31 silly addNameRange     '0.2.1',
+31 silly addNameRange     '0.2.2',
+31 silly addNameRange     '0.2.3',
+31 silly addNameRange     '0.2.4',
+31 silly addNameRange     '0.3.0',
+31 silly addNameRange     '0.3.1',
+31 silly addNameRange     '0.3.2',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.4.2',
+31 silly addNameRange     '0.4.3',
+31 silly addNameRange     '0.4.4',
+31 silly addNameRange     '0.4.5',
+31 silly addNameRange     '0.4.6',
+31 silly addNameRange     '0.4.7',
+31 silly addNameRange     '0.4.8',
+31 silly addNameRange     '0.4.9',
+31 silly addNameRange     '0.4.10',
+31 silly addNameRange     '0.4.11',
+31 silly addNameRange     '0.5.0',
+31 silly addNameRange     '0.5.1',
+31 silly addNameRange     '0.5.2',
+31 silly addNameRange     '0.6.0',
+31 silly addNameRange     '0.6.1',
+31 silly addNameRange     '0.6.2',
+31 silly addNameRange     '0.6.3',
+31 silly addNameRange     '0.6.4',
+31 silly addNameRange     '0.6.5',
+31 silly addNameRange     '0.6.6',
+31 silly addNameRange     '0.7.0',
+31 silly addNameRange     '0.7.1',
+31 silly addNameRange     '0.8.0',
+31 silly addNameRange     '0.8.1',
+31 silly addNameRange     '0.8.2',
+31 silly addNameRange     '0.8.3',
+31 silly addNameRange     '0.8.4',
+31 silly addNameRange     '0.9.0',
+31 silly addNameRange     '0.10.0',
+31 silly addNameRange     '0.10.1',
+31 silly addNameRange     '0.11.0',
+31 silly addNameRange     '0.11.1',
+31 silly addNameRange     '0.11.2',
+31 silly addNameRange     '0.11.3',
+31 silly addNameRange     '0.11.4',
+31 silly addNameRange     '0.11.5',
+31 silly addNameRange     '0.11.6',
+31 silly addNameRange     '0.12.0',
+31 silly addNameRange     '0.12.1',
+31 silly addNameRange     '0.12.2',
+31 silly addNameRange     '0.12.3',
+31 silly addNameRange     '0.12.4',
+31 silly addNameRange     '0.12.5',
+31 silly addNameRange     '0.13.0',
+31 silly addNameRange     '0.13.1',
+31 silly addNameRange     '0.14.0',
+31 silly addNameRange     '0.14.1',
+31 silly addNameRange     '0.14.2',
+31 silly addNameRange     '0.14.3',
+31 silly addNameRange     '0.14.4',
+31 silly addNameRange     '0.15.0-beta1',
+31 silly addNameRange     '0.14.5',
+31 silly addNameRange     '0.15.0-beta2',
+31 silly addNameRange     '0.15.0',
+31 silly addNameRange     '0.15.1',
+31 silly addNameRange     '0.16.0',
+31 silly addNameRange     '0.16.1',
+31 silly addNameRange     '0.17.0',
+31 silly addNameRange     '0.18.0',
+31 silly addNameRange     '0.18.1',
+31 silly addNameRange     '0.18.2',
+31 silly addNameRange     '0.18.3',
+31 silly addNameRange     '0.19.0',
+31 silly addNameRange     '0.19.1',
+31 silly addNameRange     '0.19.2',
+31 silly addNameRange     '0.19.3',
+31 silly addNameRange     '0.19.4',
+31 silly addNameRange     '0.20.0',
+31 silly addNameRange     '0.21.0',
+31 silly addNameRange     '0.21.1',
+31 silly addNameRange     '0.21.2',
+31 silly addNameRange     '0.21.3',
+31 silly addNameRange     '0.22.0',
+31 silly addNameRange     '0.23.0',
+31 silly addNameRange     '0.23.1',
+31 silly addNameRange     '0.23.2',
+31 silly addNameRange     '0.23.3',
+31 silly addNameRange     '0.24.0',
+31 silly addNameRange     '0.24.1',
+31 silly addNameRange     '0.24.2',
+31 silly addNameRange     '0.24.3',
+31 silly addNameRange     '0.24.4',
+31 silly addNameRange     '0.24.5',
+31 silly addNameRange     '0.24.7',
+31 silly addNameRange     '0.24.8',
+31 silly addNameRange     '0.24.9',
+31 silly addNameRange     '0.24.10',
+31 silly addNameRange     '0.25.0',
+31 silly addNameRange     '0.26.0',
+31 silly addNameRange     '0.27.0',
+31 silly addNameRange     '0.27.1',
+31 silly addNameRange     '0.27.2',
+31 silly addNameRange     '0.28.0',
+31 silly addNameRange     '0.28.1',
+31 silly addNameRange     '0.28.2',
+31 silly addNameRange     '0.28.3',
+31 silly addNameRange     '0.29.0',
+31 silly addNameRange     '0.29.1',
+31 silly addNameRange     '0.29.2',
+31 silly addNameRange     '0.29.3',
+31 silly addNameRange     '0.30.0',
+31 silly addNameRange     '0.31.0',
+31 silly addNameRange     '0.32.0',
+31 silly addNameRange     '0.32.1',
+31 silly addNameRange     '0.32.2',
+31 silly addNameRange     '0.33.0',
+31 silly addNameRange     '0.33.1',
+31 silly addNameRange     '0.33.2',
+31 silly addNameRange     '0.33.3',
+31 silly addNameRange     '0.33.4',
+31 silly addNameRange     '0.33.5',
+31 silly addNameRange     '0.34.0',
+31 silly addNameRange     '0.34.1',
+31 silly addNameRange     '0.34.2' ] ]
+32 verbose addNamed [ 'lineman', '0.34.2' ]
+33 verbose addNamed [ '0.34.2', '0.34.2' ]
+34 silly lockFile ec29cc5d-lineman-0-34-2 lineman@0.34.2
+35 verbose lock lineman@0.34.2 /home/danilo/.npm/ec29cc5d-lineman-0-34-2.lock
+36 silly lockFile ec29cc5d-lineman-0-34-2 lineman@0.34.2
+37 silly lockFile ec29cc5d-lineman-0-34-2 lineman@0.34.2
+38 silly lockFile ea700902-lineman lineman@
+39 silly lockFile ea700902-lineman lineman@
+40 silly resolved [ { name: 'lineman',
+40 silly resolved     description: 'A grunt-based project scaffold for HTML/CSS/JS apps',
+40 silly resolved     version: '0.34.2',
+40 silly resolved     homepage: 'http://linemanjs.com',
+40 silly resolved     author: { name: 'Justin Searls', email: 'justin@testdouble.com' },
+40 silly resolved     preferGlobal: true,
+40 silly resolved     repository: { type: 'git', url: 'https://github.com/linemanjs/lineman.git' },
+40 silly resolved     bugs: { url: 'https://github.com/linemanjs/lineman/issues' },
+40 silly resolved     bin: { lineman: './cli.js' },
+40 silly resolved     main: 'lineman',
+40 silly resolved     dependencies:
+40 silly resolved      { 'coffee-script': '1.6.3',
+40 silly resolved        commander: '1.3.2',
+40 silly resolved        'config-extend': '0.0.6',
+40 silly resolved        'connect-livereload': '^0.4.0',
+40 silly resolved        express: '3.4.0',
+40 silly resolved        fetcher: '~0.2.0',
+40 silly resolved        grunt: '0.4.1',
+40 silly resolved        'grunt-asset-fingerprint': '~0.2.0',
+40 silly resolved        'grunt-concat-sourcemap': '~0.4.0',
+40 silly resolved        'grunt-contrib-clean': '0.5.0',
+40 silly resolved        'grunt-contrib-coffee': '0.7.0',
+40 silly resolved        'grunt-contrib-copy': '0.4.1',
+40 silly resolved        'grunt-contrib-cssmin': '0.6.1',
+40 silly resolved        'grunt-contrib-handlebars': '0.8.0',
+40 silly resolved        'grunt-contrib-jshint': '0.6.4',
+40 silly resolved        'grunt-contrib-jst': '0.5.1',
+40 silly resolved        'grunt-contrib-sass': '0.5.0',
+40 silly resolved        'grunt-contrib-uglify': '0.2.4',
+40 silly resolved        'grunt-watch-nospawn': '0.0.8',
+40 silly resolved        'http-proxy': '0.10.3',
+40 silly resolved        js2coffee: '~0.2.7',
+40 silly resolved        lodash: '~0.9.0',
+40 silly resolved        'normalize-package-data': '~0.2.9',
+40 silly resolved        resolve: '~0.6.1',
+40 silly resolved        semver: '2.1.0',
+40 silly resolved        testem: '0.6.15',
+40 silly resolved        'underscore.string': '~2.3.3',
+40 silly resolved        'watch_r-structr-lock': '0.0.1' },
+40 silly resolved     devDependencies: { 'grunt-release': '~0.7.0' },
+40 silly resolved     licenses: [ [Object] ],
+40 silly resolved     keywords: [ 'lineman', 'grunt', 'yeoman', 'build', 'happiness', 'scaffold' ],
+40 silly resolved     _id: 'lineman@0.34.2',
+40 silly resolved     _shasum: '3a880213313d45d317146f7d3c8e0d040291ab0c',
+40 silly resolved     _from: 'lineman@',
+40 silly resolved     _npmVersion: '1.4.9',
+40 silly resolved     _npmUser: { name: 'searls', email: 'searls@gmail.com' },
+40 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+40 silly resolved     dist:
+40 silly resolved      { shasum: '3a880213313d45d317146f7d3c8e0d040291ab0c',
+40 silly resolved        tarball: 'http://registry.npmjs.org/lineman/-/lineman-0.34.2.tgz' },
+40 silly resolved     directories: {},
+40 silly resolved     _resolved: 'https://registry.npmjs.org/lineman/-/lineman-0.34.2.tgz',
+40 silly resolved     readme: 'ERROR: No README data found!' } ]
+41 info install lineman@0.34.2 into /usr/lib
+42 info installOne lineman@0.34.2
+43 verbose lib/node_modules/lineman unbuild
+44 verbose tar unpack /home/danilo/.npm/lineman/0.34.2/package.tgz
+45 silly lockFile 5d8dde80-tar-usr-lib-node-modules-lineman tar:///usr/lib/node_modules/lineman
+46 verbose lock tar:///usr/lib/node_modules/lineman /home/danilo/.npm/5d8dde80-tar-usr-lib-node-modules-lineman.lock
+47 silly lockFile 78ecc218-o-npm-lineman-0-34-2-package-tgz tar:///home/danilo/.npm/lineman/0.34.2/package.tgz
+48 verbose lock tar:///home/danilo/.npm/lineman/0.34.2/package.tgz /home/danilo/.npm/78ecc218-o-npm-lineman-0-34-2-package-tgz.lock
+49 silly gunzTarPerm modes [ '775', '664' ]
+50 error Error: EACCES, mkdir '/usr/lib/node_modules/lineman'
+50 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/lineman']
+50 error   errno: 3,
+50 error   code: 'EACCES',
+50 error   path: '/usr/lib/node_modules/lineman',
+50 error   fstream_type: 'Directory',
+50 error   fstream_path: '/usr/lib/node_modules/lineman',
+50 error   fstream_class: 'DirWriter',
+50 error   fstream_stack:
+50 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+50 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+50 error      'Object.oncomplete (fs.js:107:15)' ] }
+51 error Please try running this command again as root/Administrator.
+52 error System Linux 3.2.0-69-generic-pae
+53 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "lineman"
+54 error cwd /home/danilo/Pessoais/pull-request-reviews
+55 error node -v v0.10.32
+56 error npm -v 1.4.28
+57 error path /usr/lib/node_modules/lineman
+58 error fstream_path /usr/lib/node_modules/lineman
+59 error fstream_type Directory
+60 error fstream_class DirWriter
+61 error code EACCES
+62 error errno 3
+63 error stack Error: EACCES, mkdir '/usr/lib/node_modules/lineman'
+64 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+64 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+64 error fstream_stack Object.oncomplete (fs.js:107:15)
+65 verbose exit [ 3, true ]

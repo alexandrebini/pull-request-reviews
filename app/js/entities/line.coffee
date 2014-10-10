@@ -14,7 +14,14 @@
 
       response
 
+    accept: ->
+      @review 'accept'
+
+    reject: ->
+      @review 'reject'
+
     review: (type) ->
+      console.log 'line review', type, @get('text')
       @get('reviews').add new Entities.Review(type: type)
 
   class Entities.Lines extends Backbone.Collection
