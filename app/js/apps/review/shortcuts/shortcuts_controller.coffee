@@ -5,6 +5,7 @@
 
       App.execute 'when:fetched', @pullRequest, =>
         @bindKeys()
+        @pullRequest.selectFirstFile()
 
     bindKeys: ->
       Mousetrap.bind 'a', (e) => @exec(e, 'accept:line')
@@ -12,6 +13,8 @@
       Mousetrap.bind 'r', (e) => @exec(e, 'reject:line')
       Mousetrap.bind ['command+r', 'ctrl+r'], (e) => @exec(e, 'reject:file')
       Mousetrap.bind '?', (e) => @exec(e, 'start:discussion')
+      Mousetrap.bind 'up', (e) => @exec(e, 'previous:line')
+      Mousetrap.bind 'down', (e) => @exec(e, 'next:line')
 
     unbindKeys: ->
       Mousetrap.unbind 'a'
@@ -19,6 +22,8 @@
       Mousetrap.unbind 'r'
       Mousetrap.unbind ['command+r', 'ctrl+r']
       Mousetrap.unbind '?'
+      Mousetrap.unbind 'up'
+      Mousetrap.unbind 'down'
 
     exec: (e, type) ->
       e.preventDefault() if e && e.preventDefault
@@ -34,6 +39,8 @@
         when 'reject:line' then @rejectLine()
         when 'reject:file' then @rejectFile()
         when 'start:discussion' then @startDiscussion()
+        when 'next:line' then @nextLine()
+        when 'previous:line' then @previousLine()
 
     # press "A"
     acceptLine: ->
@@ -55,6 +62,14 @@
     startDiscussion: ->
       console.log 'start discussion'
       # @model.currentFile.currentLine.discussion.add new Discussion()
+
+    # press "dowm"
+    nextLine: ->
+      @pullRequest.goToNextLine()
+
+    # press "up"
+    previousLine: ->
+      @pullRequest.goToPreviousLine()
 
     onDestroy: ->
       @unbindKeys()

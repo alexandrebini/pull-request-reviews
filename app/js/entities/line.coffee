@@ -1,5 +1,8 @@
 @PullRequestsReviews.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
   class Entities.Line extends Backbone.Model
+    defaults:
+      current: false
+
     mutators:
       reviewed: ->
         @get('reviews').length > 0
@@ -21,7 +24,6 @@
       @review 'reject'
 
     review: (type) ->
-      console.log 'line review', type, @get('text')
       @get('reviews').add new Entities.Review(type: type)
 
   class Entities.Lines extends Backbone.Collection
