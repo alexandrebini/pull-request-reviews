@@ -8,6 +8,7 @@
       deleteButton: 'a.delete'
       message: 'p.message'
       form: 'form'
+
     triggers:
       'click @ui.cancelButton' : 'cancelButton:clicked'
       'click @ui.editButton' : 'editButton:clicked'

@@ -11,6 +11,8 @@
 
   class Line.CodeView extends Marionette.ItemView
     template: 'lines/code'
+    modelEvents:
+      'change:current': 'render'
 
   class Line.NumberView extends Marionette.ItemView
     template: 'lines/numbers'
