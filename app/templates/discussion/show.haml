@@ -1,4 +1,7 @@
-%input{ value: @message }
+%p.message= @message
+%form
+  %input{ value: @message }
+}
 %a.cancel Cancel
 %a.send Send
 %a.delete Delete
