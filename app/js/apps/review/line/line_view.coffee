@@ -4,7 +4,8 @@
     className: 'line'
 
     regions:
-      reviewRegion: '.review-region'
+      numbersRegion: '.numbers-region'
+      markersRegion: '.markers-region'
       codeRegion: '.code-region'
       discussionsRegion: '.discussions-region'
 
@@ -12,3 +13,6 @@
     template: 'lines/code'
     modelEvents:
       'change:current': 'render'
+
+  class Line.NumberView extends Marionette.ItemView
+    template: 'lines/numbers'

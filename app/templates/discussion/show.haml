@@ -1,1 +1,7 @@
-= @message
+%p.message= @message
+%form
+  %input{ value: @message }
+  %input{ type: 'submit', value: 'salvar', class: 'submit' }
+%a.edit Edit
+%a.cancel Cancel
+%a.delete Delete

@@ -59,9 +59,9 @@
       @currentFile.reject() if @currentFile?
 
     # press "?"
-    startDiscussion: ->
-      console.log 'start discussion'
-      # @model.currentFile.currentLine.discussion.add new Discussion()
+    startDiscussion: (e) ->
+      e.preventDefault() if e && e.preventDefault
+      App.execute 'line:start:discussion', @currentLine
 
     # press "dowm"
     nextLine: ->
