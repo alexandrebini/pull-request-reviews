@@ -32,6 +32,7 @@
     getMarkersView: ->
       App.request 'markers:wrapper', @model.get('reviews')
 
+
     getCodeView: ->
       new Line.CodeView
         model: @model
