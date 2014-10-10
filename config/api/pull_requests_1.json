@@ -8,6 +8,8 @@
       "lines": [
         {
           "id": 1,
+          "line_number": 2,
+          "older_line_number": 1,
           "text": "+This is an awesome pull request",
           "reviews": [
             { "user_id": 1, "type": "accept" }
@@ -15,6 +17,8 @@
         },
         {
           "id": 2,
+          "line_number": 4,
+          "older_line_number": 2,
           "text": "+with multiple lines",
           "reviews": [
             { "user_id": 1, "type": "accept" }
@@ -31,6 +35,8 @@
       "lines": [
         {
           "id": 4,
+          "line_number": 2,
+          "older_line_number": 1,
           "text": "+That's one small step for [a] man, one giant leap for mankind",
           "reviews": [
             { "user_id": 1, "type": "accept" }
@@ -39,6 +45,8 @@
         {
           "id": 5,
           "text": "+",
+          "line_number": 4,
+          "older_line_number": 2,
           "reviews": [
             { "user_id": 1, "type": "reject" }
           ],
@@ -48,6 +56,8 @@
         },
         {
           "id": 6,
+          "line_number": 20,
+          "older_line_number": 18,
           "text": "+Neil Armstrong"
         }
       ]
