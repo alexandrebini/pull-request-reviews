@@ -3,7 +3,6 @@
 *.log
 *.rbc
 .DS_Store
-.DS_Store
 .rspec
 .rvmrc
 .sass-cache
@@ -19,5 +18,6 @@
 /vendor/bundle
 /vendor/js/**/*
 bower.json
+Gemfile.lock
 pickle-email-*.html
 rerun.txt
