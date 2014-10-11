@@ -1,5 +1,5 @@
 @PullRequestsReviews.module 'ReviewApp.Marker', (Marker, App, Backbone, Marionette, $, _) ->
-  class Marker.Maker extends Marionette.CompositeView
+  class Marker.Maker extends Marionette.ItemView
     template: 'markers/marker'
     modelEvents:
       'change:type': 'render'
@@ -19,3 +19,23 @@
     template: 'markers/layout'
     className: 'file-line-markers'
     childViewContainer: 'div'
+
+    initialize: ->
+      @collection.checkClassName()
+
+    ui:
+      span: 'span'
+
+    modelEvents:
+      'change:className': 'changeClassAttributes'
+
+    collectionEvents:
+      'add': 'modelAdded'
+
+    changeClassAttributes: ->
+      @ui.span.removeAttr 'class'
+      @ui.span.addClass @model.get('className')
+
+
+    modelAdded: ->
+      @collection.checkClassName()

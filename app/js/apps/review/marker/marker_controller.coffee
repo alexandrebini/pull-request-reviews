@@ -9,8 +9,9 @@
 
     getMarkersView: ->
       new Marker.Makers
+        model: @collection.status
         collection: @collection
 
-  App.reqres.setHandler 'markers:wrapper', (review) ->
-    marker = new Marker.Controller(review)
+  App.reqres.setHandler 'markers:wrapper', (reviews) ->
+    marker = new Marker.Controller(reviews)
     marker.view
