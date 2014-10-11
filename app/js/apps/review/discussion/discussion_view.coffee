@@ -15,9 +15,6 @@
       'click @ui.deleteButton' : 'deleteButton:clicked'
       'submit' : 'form:submit'
 
-    initialize: ->
-      $(@ui.form).hide()
-
     editMessage: ->
       @ui.form.show()
       @ui.message.hide()

@@ -43,7 +43,6 @@
     getDiscussionView: ->
       App.request 'discussions:wrapper', @model.get('discussions')
 
-
   App.reqres.setHandler 'line:wrapper', (line) ->
     controller = new Line.Controller(line)
     controller.layout
