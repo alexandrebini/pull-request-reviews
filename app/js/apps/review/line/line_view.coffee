@@ -4,6 +4,7 @@
     className: 'line'
 
     regions:
+      addDiscussionRegion: '.add-discussion-region'
       numbersRegion: '.numbers-region'
       markersRegion: '.markers-region'
       codeRegion: '.code-region'
@@ -16,3 +17,11 @@
 
   class Line.NumberView extends Marionette.ItemView
     template: 'lines/numbers'
+
+  class Line.AddDiscussionView extends Marionette.ItemView
+    template: 'lines/add_discussion'
+    tagName: 'a'
+    className: '.add_discussion'
+
+    triggers:
+      'click' : 'addButton:clicked'
