@@ -2,7 +2,7 @@
   class List.Layout extends Marionette.LayoutView
     template: 'pull_requests/layout'
     regions:
-      listRegion: '.pull_requests'
+      listRegion: '.pull-requests'
 
   class List.PullRequestView extends Marionette.ItemView
     template: 'pull_requests/show'
