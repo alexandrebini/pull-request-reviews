@@ -9,9 +9,8 @@
 
     bindKeys: ->
       Mousetrap.bind 'a', (e) => @exec(e, 'accept:line')
-      Mousetrap.bind ['command+a', 'ctrl+a'], (e) => @exec(e, 'accept:file')
-      Mousetrap.bind 'r', (e) => @exec(e, 'reject:line')
-      Mousetrap.bind ['command+r', 'ctrl+r'], (e) => @exec(e, 'reject:file')
+      Mousetrap.bind 'd', (e) => @exec(e, 'reject:line')
+      Mousetrap.bind ['command+d', 'ctrl+d'], (e) => @exec(e, 'reject:file')
       Mousetrap.bind '?', (e) => @exec(e, 'start:discussion')
       Mousetrap.bind 'up', (e) => @exec(e, 'previous:line')
       Mousetrap.bind 'down', (e) => @exec(e, 'next:line')
@@ -21,8 +20,8 @@
     unbindKeys: ->
       Mousetrap.unbind 'a'
       Mousetrap.unbind ['command+a', 'ctrl+a']
-      Mousetrap.unbind 'r'
-      Mousetrap.unbind ['command+r', 'ctrl+r']
+      Mousetrap.unbind 'd'
+      Mousetrap.unbind ['command+d', 'ctrl+d']
       Mousetrap.unbind '?'
       Mousetrap.unbind 'up'
       Mousetrap.unbind 'down'
