@@ -34,6 +34,8 @@
     parse: (response) ->
       @get('files').reset(response.files, parse: true)
       delete response.files
+      @set repository: new Entities.Repository(id: response.repository_id)
+      delete response.repository_id
       response
 
     selectFirstFile: ->
