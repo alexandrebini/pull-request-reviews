@@ -14,7 +14,18 @@
     template: 'lines/code'
     className: 'file-line-code'
     modelEvents:
-      'change:current': 'render'
+      'change:current': 'render onChangeCurrent'
+
+    onChangeCurrent: ->
+      if @model.get('current') && !@isVisible()
+        $(window).scrollTop(@$el.offset().top)
+
+    isVisible: ->
+      documentViewTop = $(window).scrollTop()
+      documentViewBottom = documentViewTop + $(window).height()
+      elementTop = @$el.offset().top
+      elementBottom = elementTop + @$el.height()
+      (elementBottom <= documentViewBottom) && (elementTop >= documentViewTop)
 
   class Line.NumberView extends Marionette.ItemView
     template: 'lines/numbers'
