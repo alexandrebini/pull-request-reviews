@@ -7,7 +7,7 @@
       @listenTo @layout, 'show', =>
         @markersRegion()
         @codeRegion()
-        @discussionRegion()
+        # @discussionRegion()
         @numbersRegion()
 
     getLayout: ->
@@ -31,7 +31,6 @@
 
     getMarkersView: ->
       App.request 'markers:wrapper', @model.get('reviews')
-
 
     getCodeView: ->
       new Line.CodeView

@@ -15,6 +15,8 @@
       Mousetrap.bind '?', (e) => @exec(e, 'start:discussion')
       Mousetrap.bind 'up', (e) => @exec(e, 'previous:line')
       Mousetrap.bind 'down', (e) => @exec(e, 'next:line')
+      Mousetrap.bind ['command+up', 'ctrl+up'], (e) => @exec(e, 'previous:file')
+      Mousetrap.bind ['command+down', 'ctrl+down'], (e) => @exec(e, 'next:file')
 
     unbindKeys: ->
       Mousetrap.unbind 'a'
@@ -24,6 +26,8 @@
       Mousetrap.unbind '?'
       Mousetrap.unbind 'up'
       Mousetrap.unbind 'down'
+      Mousetrap.unbind ['command+up', 'ctrl+up']
+      Mousetrap.unbind ['command+down', 'ctrl+down']
 
     exec: (e, type) ->
       e.preventDefault() if e && e.preventDefault
@@ -41,26 +45,35 @@
         when 'start:discussion' then @startDiscussion()
         when 'next:line' then @nextLine()
         when 'previous:line' then @previousLine()
+        when 'next:file' then @nextFile()
+        when 'previous:file' then @previousFile()
 
     # press "A"
     acceptLine: ->
-      @currentLine.accept() if @currentLine?
+      return unless @currentLine?
+      @currentLine.accept()
+      @nextLine()
 
     # press "cmd + A"
     acceptFile: ->
-      @currentFile.accept() if @currentFile?
+      return unless @currentFile?
+      @currentFile.accept()
+      @nextFile()
 
     # press "R"
     rejectLine: ->
-      @currentLine.reject() if @currentLine?
+      return unless @currentLine?
+      @currentLine.reject()
+      @nextLine()
 
     # press "cmd + R"
     rejectFile: ->
-      @currentFile.reject() if @currentFile?
+      return unless @currentFile?
+      @currentFile.reject()
+      @nextFile()
 
     # press "?"
     startDiscussion: (e) ->
-      e.preventDefault() if e && e.preventDefault
       App.execute 'line:start:discussion', @currentLine
 
     # press "dowm"
@@ -70,6 +83,14 @@
     # press "up"
     previousLine: ->
       @pullRequest.goToPreviousLine()
+
+    # press "cmd + dowm"
+    nextFile: ->
+      @pullRequest.goToNextFile()
+
+    # press "cmd + up"
+    previousFile: ->
+      @pullRequest.goToPreviousFile()
 
     onDestroy: ->
       @unbindKeys()

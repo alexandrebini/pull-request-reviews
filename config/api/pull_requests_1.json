@@ -12,7 +12,7 @@
           "older_line_number": 1,
           "text": "+This is an awesome pull request",
           "reviews": [
-            { "user_id": 1, "type": "accept" }
+            { "user_id": 2, "type": "accept" }
           ],
           "discussions": [
             {

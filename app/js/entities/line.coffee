@@ -18,13 +18,10 @@
       response
 
     accept: ->
-      @review 'accept'
+      @get('reviews').accept()
 
     reject: ->
-      @review 'reject'
-
-    review: (type) ->
-      @get('reviews').add new Entities.Review(type: type)
+      @get('reviews').reject()
 
   class Entities.Lines extends Backbone.Collection
     model: Entities.Line
