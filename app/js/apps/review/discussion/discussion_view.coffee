@@ -23,6 +23,10 @@
       @ui.form.hide()
       @ui.message.show()
 
+    onShow: ->
+      if @model.get('message')
+        @ui.form.hide()
+
   class Discussion.DiscussionsView extends Marionette.CollectionView
     childView: Discussion.DiscussionView
     tagName: 'ul'
