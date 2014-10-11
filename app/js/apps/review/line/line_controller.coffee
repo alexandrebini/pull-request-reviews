@@ -48,4 +48,5 @@
     controller.layout
 
   App.commands.setHandler 'line:start:discussion', (currentLine) ->
-    currentLine.get('discussions').add new App.Entities.Discussion()
+    if currentLine.get('currentDiscuss').get('hasMessage')
+      currentLine.get('discussions').add new App.Entities.Discussion()

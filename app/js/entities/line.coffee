@@ -7,6 +7,9 @@
       reviewed: ->
         @get('reviews').length > 0
 
+      currentDiscuss: ->
+        @get('discussions').last()
+
     parse: (response) ->
       @set
         reviews: new Entities.Reviews(response.reviews, parse: true)
