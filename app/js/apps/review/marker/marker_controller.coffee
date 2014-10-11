@@ -1,8 +1,7 @@
 @PullRequestsReviews.module 'ReviewApp.Marker', (Marker, App, Backbone, Marionette, $, _) ->
   class Marker.Controller extends Marionette.Controller
-    initialize: (reviews) ->
-      console.log reviews
-      @collection = reviews
+    initialize: (review) ->
+      @collection = review
       @view = @markersRegion()
 
     markersRegion: ->

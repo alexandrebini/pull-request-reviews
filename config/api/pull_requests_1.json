@@ -2,9 +2,11 @@
   "id": 1,
   "name": "The first of many #1",
   "files_changed": 2,
+  "description": "Definindo método recursivo que chama ele mesmo",
+  "repository_id": 1,
   "files": [
     {
-      "name": "file1.txt",
+      "name": "app/controllers/feeds_controller.rb",
       "lines": [
         {
           "id": 1,
@@ -12,7 +14,7 @@
           "older_line_number": 1,
           "text": "+This is an awesome pull request",
           "reviews": [
-            { "user_id": 1, "type": "accept" }
+            { "user_id": 2, "type": "accept" }
           ],
           "discussions": [
             {
@@ -49,7 +51,7 @@
       ]
     },
     {
-      "name": "file2.txt",
+      "name": "app/controllers/games_controller.rb",
       "lines": [
         {
           "id": 4,
@@ -100,6 +102,112 @@
           "line_number": 20,
           "older_line_number": 18,
           "text": "+Neil Armstrong"
+        }
+      ]
+    },
+    {
+      "name": "app/assets/javascripts/apps/games/show/show_controller.coffee",
+      "lines": [
+        {
+          "id": 7,
+          "line_number": 2,
+          "older_line_number": 1,
+          "text": "+@PullRequestsReviews.module 'ReviewApp.File', (File, App, Backbone, Marionette, $, _) ->",
+          "reviews": [
+            { "user_id": 1, "type": "accept" }
+          ],
+          "discussions": [
+
+          ]
+        },
+        {
+          "id": 8,
+          "line_number": 4,
+          "older_line_number": 2,
+          "text": "+class File.Controller extends Marionette.Controller",
+          "reviews": [
+            { "user_id": 1, "type": "accept" }
+          ]
+        },
+        {
+          "id": 9,
+          "text": "+initialize: (file) ->"
+        },
+        {
+          "id": 10,
+          "text": "+@model = file"
+        },
+        {
+          "id": 11,
+          "text": "+@collection = file.get('lines')"
+        },
+        {
+          "id": 12,
+          "text": "+@view = @fileRegion()"
+        },
+        {
+          "id": 13,
+          "text": "+fileRegion: ->"
+        },
+        {
+          "id": 14,
+          "text": "+fileView = @getFileView()"
+        },
+        {
+          "id": 15,
+          "text": "+_buildChildView = fileView.buildChildView"
+        },
+        {
+          "id": 16,
+          "text": "+fileView.buildChildView = (child, ChildViewClass, childViewOptions) ->"
+        },
+        {
+          "id": 17,
+          "text": "+if _.isEqual(File.EmptyView, ChildViewClass)"
+        },
+        {
+          "id": 18,
+          "text": "+_buildChildView(child, ChildViewClass, childViewOptions)"
+        },
+        {
+          "id": 19,
+          "text": "+else"
+        },
+        {
+          "id": 20,
+          "text": "+App.request 'line:wrapper', child"
+        },
+        {
+          "id": 21,
+          "text": "+fileView"
+        },
+        {
+          "id": 22,
+          "text": "+getFileView: ->"
+        },
+        {
+          "id": 23,
+          "text": "+new File.FileView"
+        },
+        {
+          "id": 24,
+          "text": "+model: @model"
+        },
+        {
+          "id": 25,
+          "text": "+collection: @collection"
+        },
+        {
+          "id": 26,
+          "text": "+App.reqres.setHandler 'file:wrapper', (file) ->"
+        },
+        {
+          "id": 27,
+          "text": "+controller = new File.Controller(file)"
+        },
+        {
+          "id": 28,
+          "text": "+controller.view"
         }
       ]
     }
