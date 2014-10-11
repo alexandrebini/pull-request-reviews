@@ -8,19 +8,29 @@
       @listenTo @layout, 'show', =>
         App.execute 'when:fetched', @pullRequest, =>
           @menuRegion()
+          @nameRegion()
           @filesRegion()
+
+          @repository = App.request 'repository:entity', pullRequest
+          App.execute 'when:fetched', @repository, =>
+            @repositoryRegion()
 
       App.mainRegion.show @layout
 
-    getLayout: ->
-      new Show.Layout()
+    nameRegion: ->
+      nameView = @getNameView()
+      @layout.nameRegion.show nameView
+
+    repositoryRegion: ->
+      repositoryView = @getRepositoryView()
+      @layout.repositoryRegion.show repositoryView
 
     menuRegion: ->
       menuView = @getMenuView()
 
       @listenTo menuView, 'childview:item:clicked', (child) ->
         model = child.model
-        model.set(isSelected: true)
+        @menu.select(model)
 
         if child.model.get('name') is 'Code'
           @filesRegion()
@@ -41,6 +51,9 @@
       descriptionView = @getDescriptionView()
       @layout.filesRegion.show descriptionView
 
+    getLayout: ->
+      new Show.Layout()
+
     getMenuView: ->
       new Show.MenuView
         collection: @menu
@@ -52,3 +65,11 @@
     getDescriptionView: ->
       new Show.DescriptionView
         model: @pullRequest
+
+    getNameView: ->
+      new Show.NameView
+        model: @pullRequest
+
+    getRepositoryView: ->
+      new Show.RepositoryView
+        model: @repository

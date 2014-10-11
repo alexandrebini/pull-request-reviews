@@ -6,6 +6,10 @@
   class Entities.Menu extends Backbone.Collection
     model: Entities.MenuItem
 
+    select: (item) ->
+      @each (model) ->
+        model.set isSelected: model == item
+
   API =
     getMenu: ->
       items = [

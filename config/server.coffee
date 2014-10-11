@@ -34,3 +34,13 @@ module.exports =
       @readJSONFile 'config/api/pull_requests_1.json', (error, json) ->
         throw error if error
         response.json json
+
+    app.get '/api/repositories', (request, response) =>
+      @readJSONFile 'config/api/repositories.json', (error, json) ->
+        throw error if error
+        response.json json
+
+    app.get '/api/repositories/1', (request, response) =>
+      @readJSONFile 'config/api/repositories_1.json', (error, json) ->
+        throw error if error
+        response.json json
