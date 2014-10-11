@@ -2,7 +2,7 @@
   class Show.Layout extends Marionette.LayoutView
     template: 'reviews/layout'
     regions:
-      filesRegion: '.review_show'
+      filesRegion: '.files_region'
 
   class Show.FilesView extends Marionette.CollectionView
     childView: Marionette.ItemView
