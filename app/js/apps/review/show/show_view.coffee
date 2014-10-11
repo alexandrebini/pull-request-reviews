@@ -3,6 +3,7 @@
     template: 'reviews/layout'
     regions:
       filesRegion: '.files_region'
+      menuRegion: '.menu'
 
   class Show.FilesView extends Marionette.CollectionView
     childView: Marionette.ItemView
