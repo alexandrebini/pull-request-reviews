@@ -9,6 +9,7 @@
 
     bindKeys: ->
       Mousetrap.bind 'a', (e) => @exec(e, 'accept:line')
+      Mousetrap.bind ['command+a', 'ctrl+a'], (e) => @exec(e, 'accept:file')
       Mousetrap.bind 'd', (e) => @exec(e, 'reject:line')
       Mousetrap.bind ['command+d', 'ctrl+d'], (e) => @exec(e, 'reject:file')
       Mousetrap.bind '?', (e) => @exec(e, 'start:discussion')
