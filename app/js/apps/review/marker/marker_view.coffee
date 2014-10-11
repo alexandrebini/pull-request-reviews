@@ -12,30 +12,20 @@
         else baseClass
 
     onRender: ->
+      @trigger 'review:changed'
       @setClassName()
 
   class Marker.Makers extends Marionette.CompositeView
     childView: Marker.Maker
     template: 'markers/layout'
-    className: 'file-line-markers'
     childViewContainer: 'div'
 
-    initialize: ->
-      @collection.checkClassName()
-
-    ui:
-      span: 'span'
-
-    modelEvents:
-      'change:className': 'changeClassAttributes'
+    className: ->
+      "#{ @collection.className() } file-line-markers"
 
     collectionEvents:
       'add': 'modelAdded'
 
-    changeClassAttributes: ->
-      @ui.span.removeAttr 'class'
-      @ui.span.addClass @model.get('className')
-
-
     modelAdded: ->
-      @collection.checkClassName()
+      @$el.removeAttr 'class'
+      @$el.addClass @className()

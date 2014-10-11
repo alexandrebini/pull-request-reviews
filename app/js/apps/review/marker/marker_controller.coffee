@@ -5,11 +5,15 @@
       @view = @markersRegion()
 
     markersRegion: ->
-      @getMarkersView()
+      view = @getMarkersView()
+
+      @listenTo view, 'childview:review:changed', (args) ->
+        view.modelAdded()
+
+      view
 
     getMarkersView: ->
       new Marker.Makers
-        model: @collection.status
         collection: @collection
 
   App.reqres.setHandler 'markers:wrapper', (reviews) ->

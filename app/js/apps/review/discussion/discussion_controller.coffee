@@ -8,7 +8,6 @@
         child.editMessage()
 
       @listenTo @view, 'childview:form:submit', (child) =>
-        console.log 'submit'
 
       @listenTo @view, 'childview:cancelButton:clicked', (child) =>
         child.abortEditMessage()
