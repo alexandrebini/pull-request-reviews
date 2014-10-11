@@ -7,7 +7,7 @@
       @listenTo @layout, 'show', =>
         @markersRegion()
         @codeRegion()
-        # @discussionRegion()
+        @discussionRegion()
         @numbersRegion()
 
     getLayout: ->
