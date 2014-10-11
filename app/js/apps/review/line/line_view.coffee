@@ -1,7 +1,7 @@
 @PullRequestsReviews.module 'ReviewApp.Line', (Line, App, Backbone, Marionette, $, _) ->
   class Line.Layout extends Marionette.LayoutView
     template: 'lines/layout'
-    className: 'line'
+    className: 'file-line'
 
     regions:
       numbersRegion: '.numbers-region'
@@ -11,8 +11,10 @@
 
   class Line.CodeView extends Marionette.ItemView
     template: 'lines/code'
+    className: 'file-line-code'
     modelEvents:
       'change:current': 'render'
 
   class Line.NumberView extends Marionette.ItemView
     template: 'lines/numbers'
+    className: 'file-line-numbers'

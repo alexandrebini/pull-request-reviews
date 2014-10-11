@@ -1,12 +1,21 @@
 @PullRequestsReviews.module 'ReviewApp.Marker', (Marker, App, Backbone, Marionette, $, _) ->
   class Marker.Maker extends Marionette.CompositeView
     template: 'markers/marker'
-    tagName: 'li'
     modelEvents:
       'change:type': 'render'
-    className: -> @model.get('type')
+
+    setClassName: ->
+      baseClass = 'file-line-marker'
+      @$el.attr class: switch
+        when @model.get('type') == 'accept' then "#{ baseClass } is-accepted"
+        when @model.get('type') == 'reject' then "#{ baseClass } is-rejected"
+        else baseClass
+
+    onRender: ->
+      @setClassName()
 
   class Marker.Makers extends Marionette.CompositeView
     childView: Marker.Maker
     template: 'markers/layout'
-    childViewContainer: 'ul'
+    className: 'file-line-markers'
+    childViewContainer: 'div'
