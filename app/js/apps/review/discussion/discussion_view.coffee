@@ -18,10 +18,17 @@
     editMessage: ->
       @ui.form.show()
       @ui.message.hide()
+      @ui.cancelButton.show()
 
     abortEditMessage: ->
       @ui.form.hide()
       @ui.message.show()
+      @ui.cancelButton.hide()
+
+    onShow: ->
+      @ui.cancelButton.hide()
+      if @model.get('message')
+        @ui.form.hide()
 
   class Discussion.DiscussionsView extends Marionette.CollectionView
     childView: Discussion.DiscussionView
