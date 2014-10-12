@@ -34,7 +34,7 @@
   class Line.AddDiscussionView extends Marionette.ItemView
     template: 'lines/add_discussion'
     tagName: 'a'
-    className: '.add_discussion'
+    className: 'add_discussion'
 
     triggers:
       'click' : 'addButton:clicked'

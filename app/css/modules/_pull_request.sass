@@ -1,49 +1,53 @@
-.pull-request
-  .header
-    border-left: 2px solid #61C1A1
-    padding-left: 15px
-    margin-top: 15px
+// *************************************
+//
+//   Pull Request
+//
+// *************************************
+
+// ----- Header ----- //
+
+.pull-request .header
+  border-left: 2px solid $color-highlight-dark
+  padding-left: 15px
+  margin-top: 15px
   .repository
     font-family: Lato Thin, Arial, serif
     font-size: 20px
   .name
     font-size: 30px
-  .menu_region
-    border-bottom: 1px solid #6DD8B5
-    padding: 10px
-    margin-top: 15px
-    li
-      cursor: pointer
-      display: inline-block
-      height: 31px
-      font-family: Lato Thin, Arial, serif
-      padding: 5px
-      position: relative
-      text-align: center
-      width: 100px
-      border-right: 1px solid #6DD8B5
-      &:last-child
-        border: none
-      &.selected, &:hover
-        &:after
-          content: ''
-          position: absolute
-          bottom: -11px
-          margin: 0 auto
-          left: 46%
-          width: 0
-          height: 0
-          border-bottom: 8px solid #FFFFFF
-          border-right: 8px solid transparent
-          border-left: 7px solid transparent
-        &:before
-          content: ''
-          position: absolute
-          bottom: -10px
-          margin: 0 auto
-          left: 45%
-          width: 0
-          height: 0
-          border-bottom: 8px solid #6DD8B5
-          border-right: 8px solid transparent
-          border-left: 8px solid transparent
+
+// ----- Menu ----- //
+.pull-request .menu_region
+  border-bottom: 1px solid $color-highlight
+  padding: 10px
+  margin-top: 15px
+  li
+    cursor: pointer
+    display: inline-block
+    height: 31px
+    font-family: Lato Thin, Arial, serif
+    padding: 5px
+    position: relative
+    text-align: center
+    width: 100px
+    border-right: 1px solid $color-highlight
+    &:last-child
+      border: none
+
+// States
+.pull-request .menu_region li
+  &.selected, &:hover
+    &:after
+      @extend %tip
+      bottom: -11px
+      left: 46%
+      border-bottom: 8px solid $base-background
+      border-right: 8px solid transparent
+      border-left: 7px solid transparent
+    &:before
+      @extend %tip
+      bottom: -10px
+      left: 45%
+      border-bottom: 8px solid $color-highlight
+      border-right: 8px solid transparent
+      border-left: 8px solid transparent
