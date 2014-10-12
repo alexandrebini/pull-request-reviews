@@ -5,6 +5,7 @@
       @layout = @getLayout()
 
       @listenTo @layout, 'show', =>
+        @addDiscussionRegion()
         @markersRegion()
         @codeRegion()
         @discussionRegion()
@@ -12,6 +13,14 @@
 
     getLayout: ->
       new Line.Layout()
+
+    addDiscussionRegion: ->
+      view = @getAddDiscussionView()
+
+      @listenTo view, 'addButton:clicked', (args) =>
+        App.execute 'line:start:discussion', @model
+
+      @layout.addDiscussionRegion.show view
 
     numbersRegion: ->
       view = @getNumberView()
@@ -32,6 +41,8 @@
     getMarkersView: ->
       App.request 'markers:wrapper', @model.get('reviews')
 
+    getAddDiscussionView: ->
+      new Line.AddDiscussionView()
 
     getCodeView: ->
       new Line.CodeView
@@ -44,10 +55,10 @@
     getDiscussionView: ->
       App.request 'discussions:wrapper', @model.get('discussions')
 
-
   App.reqres.setHandler 'line:wrapper', (line) ->
     controller = new Line.Controller(line)
     controller.layout
 
   App.commands.setHandler 'line:start:discussion', (currentLine) ->
     currentLine.get('discussions').add new App.Entities.Discussion()
+    #if currentLine.get('currentDiscuss') && currentLine.get('currentDiscuss').get('hasMessage')

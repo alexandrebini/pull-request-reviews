@@ -14,7 +14,7 @@
         child.abortEditMessage()
 
       @listenTo @view, 'childview:deleteButton:clicked', (child) =>
-        child.destroy()
+        @collection.remove child.model
 
     discussionView: ->
       new Discussion.DiscussionsView

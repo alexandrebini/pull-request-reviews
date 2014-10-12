@@ -34,13 +34,10 @@
       response
 
     accept: ->
-      @review 'accept'
+      @get('lines').each (line) -> line.accept()
 
     reject: ->
-      @review 'reject'
-
-    review: (type) ->
-      @get('lines').each (line) -> line.review(type)
+      @get('lines').each (line) -> line.reject()
 
     selectFirstLine: ->
       if firstLine = @get('lines').first()

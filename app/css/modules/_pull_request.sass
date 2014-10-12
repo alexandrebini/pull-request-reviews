@@ -3,12 +3,12 @@
     border-left: 2px solid #61C1A1
     padding-left: 15px
     margin-top: 15px
-  .project-title
+  .repository
     font-family: Lato Thin, Arial, serif
     font-size: 20px
-  .title
+  .name
     font-size: 30px
-  .menu
+  .menu_region
     border-bottom: 1px solid #6DD8B5
     padding: 10px
     margin-top: 15px
@@ -47,117 +47,3 @@
           border-bottom: 8px solid #6DD8B5
           border-right: 8px solid transparent
           border-left: 8px solid transparent
-.review_show
-  .file
-    height: auto
-    background: #FFFFFF
-    width: 100%
-    margin-top: 15px
-    border: 1px solid #E4E4E4
-    border-radius: 5px
-    h2
-      font-size: 20px
-      font-family: $base-fontFamily
-      padding: 10px
-      text-shadow: 0 1px 0 #fff
-      border-bottom: 1px solid #E4E4E4
-      background-color: #f7f7f7
-      border-top-left-radius: 4px
-      border-top-right-radius: 4px
-
-.review_show .lines-container
-  .line
-    display: inline-block
-    width: 815px
-    .numbers-region, .markers-region, .code-region
-      display: inline-block
-    .numbers-region, .markers-region
-      float: left
-      width: 10%
-    .markers-region
-      .markers
-        width: 100%
-        border-right: 1px solid #E4E4E4
-        display: inline-block
-    .code-region
-      padding: 0 10px
-      float: right
-      width: 80%
-    .discussions-region
-      display: inline-block
-      width: 100%
-      // border: 1px #E4E4E4
-      // border-style: solid none
-      .discussion
-        position: absolute
-        background: #FFF
-        overflow: hidden
-        right: 10px
-        width: 220px
-        border-radius: 5px
-        border: 1px solid #CCC
-        li
-          display: inline-block
-          padding: 0 5px
-          width: 100%
-          border-bottom: 1px solid #E4E4E4
-          &:last-child
-            border: none
-          &:not(:first-child)
-            background: #F8F8F8
-          p.message
-            font-size: 13px
-            font-family: Arial, sans-serif
-            padding: 5px 0
-          a
-            font-family: Glify, sans-serif
-            overflow: hidden
-            height: 30px
-            border-radius: 5px
-            width: 30px
-            display: inline-block
-            &.delete
-              background: #FF9494
-              color: transparent
-              border: solid #E48484
-              border-width: 0 0 2px 0
-              &:before
-                content: "o"
-                float: left
-                width: 30px
-                line-height: 30px
-                text-align: center
-                color: #fff
-            &.edit
-              color: transparent
-              background: #82ED8B
-              border: solid #74D47C
-              border-width: 0 0 2px 0
-              &:before
-                content: "n"
-                float: left
-                color: #fff
-                width: 30px
-                line-height: 30px
-                text-align: center
-            &.cancel
-              color: transparent
-              border: solid #E48484
-              border-width: 0 0 2px 0
-              background: #FF9494
-              &:before
-                content: "ù"
-                float: left
-                width: 30px
-                line-height: 30px
-                text-align: center
-                color: #fff
-
-    span
-      text-align: right
-      &.old, &.new
-        padding: 0 10px
-        border-right: 1px solid #E4E4E4
-        width: 50%
-        box-sizing: border-box
-        float: left

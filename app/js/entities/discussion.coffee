@@ -5,5 +5,9 @@
       delete response.user
       response
 
+    mutators:
+      hasMessage: ->
+        @get('message')?
+
   class Entities.Discussions extends Backbone.Collection
     model: Entities.Discussion

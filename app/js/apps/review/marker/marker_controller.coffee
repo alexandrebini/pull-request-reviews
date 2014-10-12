@@ -1,7 +1,6 @@
 @PullRequestsReviews.module 'ReviewApp.Marker', (Marker, App, Backbone, Marionette, $, _) ->
   class Marker.Controller extends Marionette.Controller
     initialize: (review) ->
-      console.log review
       @collection = review
       @view = @markersRegion()
 
@@ -10,8 +9,9 @@
 
     getMarkersView: ->
       new Marker.Makers
+        model: @collection.status
         collection: @collection
 
-  App.reqres.setHandler 'markers:wrapper', (review) ->
-    marker = new Marker.Controller(review)
+  App.reqres.setHandler 'markers:wrapper', (reviews) ->
+    marker = new Marker.Controller(reviews)
     marker.view
