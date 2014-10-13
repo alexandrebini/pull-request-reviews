@@ -2,6 +2,8 @@
   class Line.Layout extends Marionette.LayoutView
     template: 'lines/layout'
     className: 'file-line'
+    triggers:
+      'click' : 'line:clicked'
 
     regions:
       addDiscussionRegion: '.add-discussion-region'

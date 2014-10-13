@@ -12,7 +12,10 @@
         @numbersRegion()
 
     getLayout: ->
-      new Line.Layout()
+      layout = new Line.Layout()
+      @listenTo layout, 'line:clicked', (args) =>
+        @model.set current: true
+      layout
 
     addDiscussionRegion: ->
       view = @getAddDiscussionView()
