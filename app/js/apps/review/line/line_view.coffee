@@ -32,7 +32,7 @@
     className: 'file-line-numbers'
 
   class Line.AddDiscussionView extends Marionette.ItemView
-    template: 'lines/add_discussion'
+    template: false
     tagName: 'a'
     className: 'add_discussion'
 
