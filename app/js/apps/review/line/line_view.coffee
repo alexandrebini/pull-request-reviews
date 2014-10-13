@@ -4,6 +4,8 @@
     className: 'file-line'
     triggers:
       'click' : 'line:clicked'
+    modelEvents:
+      'change:current': 'onChangeCurrent'
 
     regions:
       addDiscussionRegion: '.add-discussion-region'
@@ -11,6 +13,13 @@
       markersRegion: '.markers-region'
       codeRegion: '.code-region'
       discussionsRegion: '.discussions-region'
+
+    onChangeCurrent: ->
+      console.log 'onchangecurrent'
+      if @model.get('current')
+        @$el.addClass 'is-current'
+      else
+        @$el.removeClass 'is-current'
 
   class Line.CodeView extends Marionette.ItemView
     template: 'lines/code'
