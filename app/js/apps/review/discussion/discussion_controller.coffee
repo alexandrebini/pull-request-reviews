@@ -2,20 +2,27 @@
   class Discussion.Controller extends Marionette.Controller
     initialize: (discussions) ->
       @collection = discussions
-      @view = @discussionView()
+      @view = @discussionRegion()
 
-      @listenTo @view, 'childview:editButton:clicked', (child) =>
+    discussionRegion: ->
+      return if @collection.isEmpty()
+
+      view = @getDiscussionView()
+
+      @listenTo view, 'childview:editButton:clicked', (child) =>
         child.editMessage()
 
-      @listenTo @view, 'childview:form:submit', (child) =>
+      @listenTo view, 'childview:form:submit', (child) =>
 
-      @listenTo @view, 'childview:cancelButton:clicked', (child) =>
+      @listenTo view, 'childview:cancelButton:clicked', (child) =>
         child.abortEditMessage()
 
-      @listenTo @view, 'childview:deleteButton:clicked', (child) =>
+      @listenTo view, 'childview:deleteButton:clicked', (child) =>
         @collection.remove child.model
 
-    discussionView: ->
+      view
+
+    getDiscussionView: ->
       new Discussion.DiscussionsView
         collection: @collection
 

@@ -29,8 +29,8 @@
 
   class Show.NameView extends Marionette.ItemView
     template: 'reviews/name'
-    className: '.name'
+    className: 'name'
 
   class Show.RepositoryView extends Marionette.ItemView
     template: 'reviews/name'
-    className: '.repository'
+    className: 'repository'
