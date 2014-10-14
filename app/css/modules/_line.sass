@@ -36,7 +36,7 @@
 // .structure.is-state
 
 .line.is-current
-  background: rgba($color-highlight, 0.15)
+  background: #FFFAA9
 
 // -------------------------------------
 //   Context
@@ -52,11 +52,11 @@
 
 // ----- Submodule ----- //
 
-// .module-submodule
+// ----- Numbers ----- //
 
 .line-numbers span
   &.old, &.new
-    padding: 2px 10px
+    padding: 4px 10px
     border-right: 1px solid $base-border-color
     width: 50%
     box-sizing: border-box
@@ -79,79 +79,24 @@
   &.is-rejected
     background: red
 
-// ----- Discussion ----- //
-.add-discussion-region
-  position: relative
-
-.add_discussion
-  display: none
-  cursor: pointer
-  margin: 2px 4px
-  border-radius: $base-borderRadius
-  border: solid #6EC3E1
-  border-width: 0 0 2px 0
-  position: absolute
-  right: 0
-  width: 20px
-  height: 20px
-  background: #7CDAFC
-
 // ----- Code ----- //
-.file-line-code
-  padding: 2px 10px
+.line-code
+  padding: 4px 10px
   float: right
   width: 80%
 
-// ----- Discussion ----- //
+// ----- Regions ----- //
+.numbers-region, .markers-region
+  float: left
+  width: 10%
+
 .discussions-region
   display: inline-block
   width: 100%
 
-ul.discussion
-  position: absolute
-  overflow: hidden
-  right: 2px
-  width: 220px
-  border-radius: $base-borderRadius
-  border: 1px solid $base-border-color
-  li
-    background: $base-background
-    display: inline-block
-    padding: 0 5px
-    width: 100%
-    &:last-child
-      border: none
-  li:nth-child(odd)
-    background: #F8F8F8
+.add-discussion-region
+  position: relative
 
-.discussion .message
-  font-size: 13px
-  font-family: Arial, sans-serif
-  padding: 5px 0
-
-.discussion a
-  font-family: Glify, sans-serif
-  overflow: hidden
-  height: 30px
-  border-radius: $base-borderRadius
-  color: transparent
-  width: 30px
+.discussions-region
   display: inline-block
-  &.delete
-    background: #FF9494
-    border: solid #E48484
-    border-width: 0 0 2px 0
-    &:before
-      @extend %button-content
-  &.edit
-    background: #82ED8B
-    border: solid #74D47C
-    border-width: 0 0 2px 0
-    &:before
-      @extend %button-content
-  &.cancel
-    border: solid #E48484
-    border-width: 0 0 2px 0
-    background: #FF9494
-    &:before
-      @extend %button-content
+  width: 100%

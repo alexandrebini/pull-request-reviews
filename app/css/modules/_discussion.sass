@@ -1,0 +1,105 @@
+// *************************************
+//
+//   Discussion
+//
+// *************************************
+
+// .structure
+.discussion
+  position: absolute
+  overflow: hidden
+  right: 2px
+  width: 220px
+  border-radius: $base-borderRadius
+  border: 1px solid $base-border-color
+  li
+    background: $base-background
+    display: inline-block
+    padding: 0 5px
+    width: 100%
+    &:last-child
+      border: none
+  li:nth-child(odd)
+    background: #F8F8F8
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+.add_discussion
+  display: none
+  cursor: pointer
+  margin: 2px 4px
+  border-radius: $base-borderRadius
+  border: solid #6EC3E1
+  border-width: 0 0 2px 0
+  position: absolute
+  right: 0
+  width: 20px
+  height: 20px
+  background: #7CDAFC
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// .structure-scaffolding
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Submodule ----- //
+
+// ----- Message ----- //
+.discussion-message
+  font-size: 13px
+  font-family: Arial, sans-serif
+  padding: 5px 0
+
+
+// ----- Link ----- //
+.discussion-link
+  font-family: Glify, sans-serif
+  overflow: hidden
+  height: 30px
+  border-radius: $base-borderRadius
+  color: transparent
+  width: 30px
+  display: inline-block
+
+// -------------------------------------
+//   Submodules Modifiers
+// -------------------------------------
+
+.discussion-link--delete
+  background: #FF9494
+  border: solid #E48484
+  border-width: 0 0 2px 0
+  &:before
+    @extend %button-content
+.discussion-link--edit
+  background: #82ED8B
+  border: solid #74D47C
+  border-width: 0 0 2px 0
+  &:before
+    @extend %button-content
+.discussion-link--cancel
+  border: solid #E48484
+  border-width: 0 0 2px 0
+  background: #FF9494
+  &:before
+    @extend %button-content
