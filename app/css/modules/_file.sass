@@ -32,8 +32,16 @@
   span
     text-align: right
 
-  &.is-current
-    background: $color-highlight
+//   Modifiers
+.file-line--addition
+  background: #DBFFDB
+
+.file-line--deletion
+  background: #FFECEC
+
+// States
+.file-line.is-current
+  background: #F7F5D3
 
 // ----- Commons ----- //
 .numbers-region, .markers-region
