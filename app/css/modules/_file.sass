@@ -105,20 +105,20 @@
 
 ul.discussion
   position: absolute
-  background: $base-background
   overflow: hidden
-  right: 10px
+  right: 2px
   width: 220px
   border-radius: $base-borderRadius
-  border-bottom: 1px solid $base-border-color
+  border: 1px solid $base-border-color
   li
+    background: $base-background
     display: inline-block
     padding: 0 5px
     width: 100%
     &:last-child
       border: none
-    &:not(:first-child)
-      background: #F8F8F8
+  li:nth-child(odd)
+    background: #F8F8F8
 
 .discussion .message
   font-size: 13px
