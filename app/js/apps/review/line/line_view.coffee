@@ -6,7 +6,7 @@
     modelEvents:
       'change:current': 'onChangeCurrent'
     className: =>
-      baseClass = 'line'
+      baseClass = 'file-line'
       switch @model.get('type')
         when 'addition' then "#{ baseClass} #{ baseClass }--addition"
         when 'deletion' then "#{ baseClass} #{ baseClass }--deletion"

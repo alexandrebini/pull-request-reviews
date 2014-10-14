@@ -15,7 +15,7 @@ module.exports =
         throw error if error
         response.json json
 
-    app.get '/api/users/current.json', (request, response) =>
+    app.get '/api/users/current', (request, response) =>
       systemUser = process.env['USER']
       @readJSONFile 'config/api/users.json', (error, json) ->
         throw error if error
