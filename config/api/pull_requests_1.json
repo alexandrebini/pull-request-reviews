@@ -1,7 +1,7 @@
 {
   "id": 1,
   "name": "The first of many #1",
-  "files_changed": 2,
+  "files_changed": 3,
   "description": "Definindo método recursivo que chama ele mesmo",
   "repository_id": 1,
   "files": [

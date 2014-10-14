@@ -1,0 +1,55 @@
+{
+  "id": 1,
+  "name": "A cleaned up Pull Request #2",
+  "files_changed": 2,
+  "description": "",
+  "repository_id": 2,
+  "files": [
+    {
+      "name": "app/controllers/awesome_controller.rb",
+      "lines": [
+        {
+          "id": 1,
+          "line_number": 1,
+          "older_line_number": null,
+          "text": "+def awesome_method"
+        },
+        {
+          "id": 2,
+          "line_number": 2,
+          "older_line_number": null,
+          "text": "+  puts \"I'm fucking awesome\""
+        },
+        {
+          "id": 3,
+          "line_number": 3,
+          "older_line_number": null,
+          "text": "+end"
+        }
+      ]
+    },
+    {
+      "name": "app/controllers/hello_world_controller.rb",
+      "lines": [
+        {
+          "id": 4,
+          "line_number": null,
+          "older_line_number": 1,
+          "text": "-def hello_world"
+        },
+        {
+          "id": 5,
+          "line_number": null,
+          "older_line_number": 2,
+          "text": "-  puts \"Hello World!\""
+        },
+        {
+          "id": 6,
+          "line_number": null,
+          "older_line_number": 3,
+          "text": "-end"
+        }
+      ]
+    }
+  ]
+}

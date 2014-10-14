@@ -10,6 +10,11 @@
       currentDiscuss: ->
         @get('discussions').last()
 
+      type: ->
+        @type ?= switch @get('text').charAt(0)
+          when '+' then 'addition'
+          when '-' then 'deletion'
+
     parse: (response) ->
       @set
         reviews: new Entities.Reviews(response.reviews, parse: true)

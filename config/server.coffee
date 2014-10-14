@@ -30,8 +30,8 @@ module.exports =
         throw error if error
         response.json json
 
-    app.get '/api/pull_requests/1', (request, response) =>
-      @readJSONFile 'config/api/pull_requests_1.json', (error, json) ->
+    app.get '/api/pull_requests/:id', (request, response) =>
+      @readJSONFile "config/api/pull_requests_#{ request.params.id }.json", (error, json) ->
         throw error if error
         response.json json
 
@@ -40,7 +40,7 @@ module.exports =
         throw error if error
         response.json json
 
-    app.get '/api/repositories/1', (request, response) =>
-      @readJSONFile 'config/api/repositories_1.json', (error, json) ->
+    app.get '/api/repositories/:id', (request, response) =>
+      @readJSONFile "config/api/repositories_#{ request.params.id }.json", (error, json) ->
         throw error if error
         response.json json
