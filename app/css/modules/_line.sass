@@ -1,39 +1,75 @@
 // *************************************
 //
-//   File
+//   Line
 //
-// *************************************
-.file
-  background: $base-background
-  width: 100%
-  margin-top: 15px
-  border: 1px solid $base-border-color
-  border-radius: $base-borderRadius
+// -------------------------------------
 
-// ----- Header ----- //
-.file-header
-  font-size: 20px
-  font-family: $base-fontFamily
-  padding: 10px
-  text-shadow: 0 1px 0 $base-background
-  border-bottom: 1px solid $base-border-color
-  background-color: #F7F7F7
-  border-top-left-radius: 4px
-  border-top-right-radius: 4px
+// .structure
+// ----- Lines ----- //
+.line
+  font-family: $c-code-fontFamily
+  font-size: 12px
+  display: inline-block
+  width: 815px
+  &:hover
+    .add-discussion-region .add_discussion
+      display: inline
+  span
+    text-align: right
 
-// ----- Commons ----- //
-.numbers-region, .markers-region
-  float: left
-  width: 10%
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+.line--addition
+  background: #DBFFDB
+
+.line--deletion
+  background: #FFECEC
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+.line.is-current
+  background: rgba($color-highlight, 0.15)
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// .structure-scaffolding
+
+// ----- Submodule ----- //
+
+// .module-submodule
+
+.line-numbers span
+  &.old, &.new
+    padding: 2px 10px
+    border-right: 1px solid $base-border-color
+    width: 50%
+    box-sizing: border-box
+    float: left
 
 // ----- Markers ----- //
-.file-line-markers
+.line-markers
   float: left
   width: 100%
   border-right: 1px solid $base-border-color
   display: inline-block
 
-.file-line-marker
+.line-marker
   width: 10px
   height: 10px
   border-radius: $base-borderRadius
