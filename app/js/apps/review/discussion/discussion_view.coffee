@@ -8,12 +8,13 @@
       deleteButton: 'a.delete'
       message: 'p.message'
       form: 'form'
-
     triggers:
       'click @ui.cancelButton' : 'cancelButton:clicked'
       'click @ui.editButton' : 'editButton:clicked'
       'click @ui.deleteButton' : 'deleteButton:clicked'
       'submit' : 'form:submit'
+    modelEvents:
+      'change isChangeable': 'onChangeableChanged'
 
     editMessage: ->
       @ui.form.show()
@@ -27,8 +28,15 @@
 
     onShow: ->
       @ui.cancelButton.hide()
+      @ui.editButton.hide()
+      @ui.deleteButton.hide()
       if @model.get('message')
         @ui.form.hide()
+
+    onChangeableChanged: ->
+      if @model.get('isChangeable')
+        @ui.editButton.show()
+        @ui.deleteButton.show()
 
   class Discussion.DiscussionsView extends Marionette.CollectionView
     childView: Discussion.DiscussionView
