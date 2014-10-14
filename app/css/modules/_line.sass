@@ -1,0 +1,98 @@
+// *************************************
+//
+//   Line
+//
+// -------------------------------------
+
+// .structure
+// ----- Lines ----- //
+.line
+  font-family: $c-code-fontFamily
+  font-size: 12px
+  display: inline-block
+  width: 815px
+  &:hover
+    .add-discussion-region .add_discussion
+      display: inline
+  span
+    text-align: right
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+.line--addition
+  background: #DBFFDB
+
+.line--deletion
+  background: #FFECEC
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+.line.is-current
+  background: #FFFAA9
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// .structure-scaffolding
+
+// ----- Submodule ----- //
+
+// ----- Numbers ----- //
+
+.line-numbers span
+  &.old, &.new
+    padding: 4px 10px
+    border-right: 1px solid $base-border-color
+    width: 50%
+    box-sizing: border-box
+    float: left
+
+// ----- Markers ----- //
+.line-markers
+  float: left
+  width: 100%
+  border-right: 1px solid $base-border-color
+  display: inline-block
+
+.line-marker
+  width: 10px
+  height: 10px
+  border-radius: $base-borderRadius
+  display: inline-block
+  &.is-accepted
+    background: green
+  &.is-rejected
+    background: red
+
+// ----- Code ----- //
+.line-code
+  padding: 4px 10px
+  float: right
+  width: 80%
+
+// ----- Regions ----- //
+.numbers-region, .markers-region
+  float: left
+  width: 10%
+
+.discussions-region
+  display: inline-block
+  width: 100%
+
+.add-discussion-region
+  position: relative

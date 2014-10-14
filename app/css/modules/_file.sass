@@ -3,12 +3,45 @@
 //   File
 //
 // *************************************
+
+// .structure
 .file
   background: $base-background
   width: 100%
   margin-top: 15px
   border: 1px solid $base-border-color
   border-radius: $base-borderRadius
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// .structure--modifier
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// .structure.is-state
+
+// -------------------------------------
+//   Context
+// -------------------------------------
+
+// .has-structure
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// .structure-scaffolding
+
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Submodule ----- //
 
 // ----- Header ----- //
 .file-header
@@ -20,85 +53,3 @@
   background-color: #F7F7F7
   border-top-left-radius: 4px
   border-top-right-radius: 4px
-
-// ----- Lines ----- //
-.file-line
-  font-size: 14px
-  display: inline-block
-  width: 815px
-  &:hover
-    .add-discussion-region .add_discussion
-      display: inline
-  span
-    text-align: right
-
-//   Modifiers
-.file-line--addition
-  background: #DBFFDB
-
-.file-line--deletion
-  background: #FFECEC
-
-// States
-.file-line.is-current
-  background: #FFFAA9
-
-// ----- Commons ----- //
-.numbers-region, .markers-region
-  float: left
-  width: 10%
-
-// ----- Numbers ----- //
-.file-line-numbers span
-  &.old, &.new
-    padding: 2px 10px
-    border-right: 1px solid $base-border-color
-    width: 50%
-    box-sizing: border-box
-    float: left
-
-// ----- Markers ----- //
-.file-line-markers
-  float: left
-  width: 100%
-  border-right: 1px solid $base-border-color
-  display: inline-block
-
-.file-line-marker
-  width: 10px
-  height: 10px
-  border-radius: $base-borderRadius
-  display: inline-block
-  &.is-accepted
-    background: green
-  &.is-rejected
-    background: red
-
-// ----- Discussion ----- //
-.add-discussion-region
-  position: relative
-
-.add_discussion
-  display: none
-  cursor: pointer
-  margin: 2px 4px
-  border-radius: $base-borderRadius
-  border: solid #6EC3E1
-  border-width: 0 0 2px 0
-  position: absolute
-  right: 0
-  width: 20px
-  height: 20px
-  background: #7CDAFC
-
-// ----- Code ----- //
-.file-line-code
-  font-family: $c-code-fontFamily
-  padding: 2px 10px
-  float: right
-  width: 80%
-
-// ----- Discussion ----- //
-.discussions-region
-  display: inline-block
-  width: 100%
