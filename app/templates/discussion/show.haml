@@ -1,7 +1,7 @@
-%p.message= @message
+%p.discussion-message= @message
 %form
   %input{ value: @message }
   %input{ type: 'submit', value: 'salvar', class: 'submit' }
-%a.edit Edit
-%a.cancel Cancel
-%a.delete Delete
+%a.discussion-link.discussion-link--edit Edit
+%a.discussion-link.discussion-link--cancel Cancel
+%a.discussion-link.discussion-link--delete Delete

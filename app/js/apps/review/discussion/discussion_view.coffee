@@ -3,10 +3,10 @@
     template: 'discussion/show'
     tagName: 'li'
     ui:
-      cancelButton: 'a.cancel'
-      editButton: 'a.edit'
-      deleteButton: 'a.delete'
-      message: 'p.message'
+      cancelButton: 'a.discussion-link--cancel'
+      editButton: 'a.discussion-link--edit'
+      deleteButton: 'a.discussion-link--delete'
+      message: 'p.discussion-message'
       form: 'form'
 
     triggers:
