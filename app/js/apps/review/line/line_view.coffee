@@ -6,7 +6,7 @@
     modelEvents:
       'change:current': 'onChangeCurrent'
     className: =>
-      baseClass = 'file-line'
+      baseClass = 'line'
       switch @model.get('type')
         when 'addition' then "#{ baseClass} #{ baseClass }--addition"
         when 'deletion' then "#{ baseClass} #{ baseClass }--deletion"
@@ -27,7 +27,7 @@
 
   class Line.CodeView extends Marionette.ItemView
     template: 'lines/code'
-    className: 'file-line-code'
+    className: 'line-code'
     modelEvents:
       'change:current': 'render onChangeCurrent'
 
@@ -44,7 +44,7 @@
 
   class Line.NumberView extends Marionette.ItemView
     template: 'lines/numbers'
-    className: 'file-line-numbers'
+    className: 'line-numbers'
 
   class Line.AddDiscussionView extends Marionette.ItemView
     template: false

@@ -5,7 +5,7 @@
       'change:type': 'render'
 
     setClassName: ->
-      baseClass = 'file-line-marker'
+      baseClass = 'line-marker'
       @$el.attr class: switch
         when @model.get('type') == 'accept' then "#{ baseClass } is-accepted"
         when @model.get('type') == 'reject' then "#{ baseClass } is-rejected"
@@ -17,7 +17,7 @@
   class Marker.Makers extends Marionette.CompositeView
     childView: Marker.Maker
     template: 'markers/layout'
-    className: 'file-line-markers'
+    className: 'line-markers'
     childViewContainer: 'div'
 
     initialize: ->
@@ -35,7 +35,6 @@
     changeClassAttributes: ->
       @ui.span.removeAttr 'class'
       @ui.span.addClass @model.get('className')
-
 
     modelAdded: ->
       @collection.checkClassName()
