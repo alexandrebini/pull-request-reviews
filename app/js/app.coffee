@@ -6,11 +6,13 @@
 
   App.addRegions
     mainRegion: 'main'
+    headerRegion: 'header'
 
   App.on 'start', (options) ->
     @startHistory()
 
   App.addInitializer ->
+    App.module('HeaderApp').start()
     App.module('PullRequestsApp').start()
     App.module('ReviewApp').start()
 

@@ -10,7 +10,7 @@
       unless @currentUser?
         @currentUser = new Entities.User()
         @currentUser.fetch
-          url: '/api/users/current.json'
+          url: '/api/users/current'
       @currentUser
 
   App.reqres.setHandler 'current:user', ->
