@@ -5,10 +5,11 @@
 
     initialize: ->
       @withCurrentUser (currentUser) =>
-        if @get('user').get('id') == currentUser.get('id')
+        if @get('user') && @get('user').get('id') == currentUser.get('id')
           @set isChangeable: true
 
     parse: (response) ->
+      console.log response.user_id
       @set user: new Entities.User(id: response.user_id)
       delete response.user
       response
