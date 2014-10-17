@@ -6,10 +6,18 @@
     model: Entities.Repository
 
   API =
+    getRepositories: ->
+      repositories = new Entities.Repositories()
+      repositories.fetch()
+      repositories
+
     getRepository: (pullRequest) ->
       repository = pullRequest.get('repository')
       repository.fetch()
       repository
+
+  App.reqres.setHandler 'repository:entities' ->
+    API.getRepositories()
 
   App.reqres.setHandler 'repository:entity', (pullRequest) ->
     API.getRepository(pullRequest)
