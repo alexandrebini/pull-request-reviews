@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'ReviewApp.Marker', (Marker, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'ReviewApp.Marker', (Marker, App, Backbone, Marionette, $, _) ->
   class Marker.Maker extends Marionette.ItemView
     template: 'markers/marker'
     modelEvents:

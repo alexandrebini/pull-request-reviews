@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'Behaviors', (Behaviors, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'Behaviors', (Behaviors, App, Backbone, Marionette, $, _) ->
   class Behaviors.ItemViewSelector extends Marionette.Behavior
     modelEvents:
       'change:isSelected' : 'onChangeSelected'

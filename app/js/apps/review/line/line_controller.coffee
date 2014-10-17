@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'ReviewApp.Line', (Line, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'ReviewApp.Line', (Line, App, Backbone, Marionette, $, _) ->
   class Line.Controller extends Marionette.Controller
     initialize: (line) ->
       @model = line

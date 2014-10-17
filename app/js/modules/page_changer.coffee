@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'PageChanger', (PageChanger, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'PageChanger', (PageChanger, App, Backbone, Marionette, $, _) ->
   class PageChanger.Changer
     @getInstance: -> @_instance ?= new @(arguments...)
 

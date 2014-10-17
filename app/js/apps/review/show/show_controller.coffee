@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'ReviewApp.Show', (Show, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'ReviewApp.Show', (Show, App, Backbone, Marionette, $, _) ->
   class Show.Controller extends Marionette.Controller
     initialize: (pullRequest) ->
       @layout = @getLayout()

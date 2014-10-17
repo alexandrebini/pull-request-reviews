@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
   class Entities.Line extends Backbone.Model
     defaults:
       current: false

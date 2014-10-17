@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'ReviewApp.File', (File, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'ReviewApp.File', (File, App, Backbone, Marionette, $, _) ->
   class File.Controller extends Marionette.Controller
     initialize: (file) ->
       @model = file

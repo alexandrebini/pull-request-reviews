@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'ReviewApp.Shortcuts', (Shortcuts, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'ReviewApp.Shortcuts', (Shortcuts, App, Backbone, Marionette, $, _) ->
   class Shortcuts.Controller extends Marionette.Controller
     initialize: (pullRequest) ->
       @pullRequest = pullRequest

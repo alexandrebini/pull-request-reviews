@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'ReviewApp.Discussion', (Discussion, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'ReviewApp.Discussion', (Discussion, App, Backbone, Marionette, $, _) ->
   class Discussion.Controller extends Marionette.Controller
     initialize: (discussions) ->
       @collection = discussions

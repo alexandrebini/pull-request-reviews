@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'HeaderApp.Show', (Show, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'HeaderApp.Show', (Show, App, Backbone, Marionette, $, _) ->
   class Show.Layout extends Marionette.LayoutView
     template: 'header/layout'
     className: 'container'

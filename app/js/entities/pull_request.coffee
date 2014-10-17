@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
   class Entities.PullRequest extends Backbone.Model
     initialize: ->
       @get('files').on 'change:current:line', (currentLine, options) =>

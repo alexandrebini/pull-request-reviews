@@ -1,4 +1,4 @@
-@PullRequestsReviews = do (Backbone, Marionette) ->
+@Reviwr = do (Backbone, Marionette) ->
   App = new Marionette.Application
 
   App.on 'before:start', ->
@@ -25,4 +25,4 @@
   App
 
 $(document).ready ->
-  PullRequestsReviews.start()
+  Reviwr.start()

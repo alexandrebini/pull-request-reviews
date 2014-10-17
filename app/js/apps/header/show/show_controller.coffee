@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'HeaderApp.Show', (Show, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'HeaderApp.Show', (Show, App, Backbone, Marionette, $, _) ->
   class Show.Controller extends Marionette.Controller
     initialize: ->
       @currentUser = App.request 'current:user'

@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'ReviewApp.File', (File, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'ReviewApp.File', (File, App, Backbone, Marionette, $, _) ->
   class File.EmptyView extends Marionette.ItemView
     template: 'files/empty'
 

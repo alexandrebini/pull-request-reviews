@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'HeaderApp', (HeaderApp, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'HeaderApp', (HeaderApp, App, Backbone, Marionette, $, _) ->
   @startWithParent = false
 
   API =

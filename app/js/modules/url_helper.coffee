@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'Helpers', (Helpers, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'Helpers', (Helpers, App, Backbone, Marionette, $, _) ->
   class Helpers.Url
     @getInstance: -> @_instance ?= new @(arguments...)
 

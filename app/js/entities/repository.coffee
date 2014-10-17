@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'Entities', (Entities, App, Backbone, Marionette, $, _) ->
   class Entities.Repository extends Backbone.Model
     urlRoot: '/api/repositories'
 

@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'PullRequestsApp.List', (List, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'PullRequestsApp.List', (List, App, Backbone, Marionette, $, _) ->
   class List.Controller extends Marionette.Controller
     initialize: ->
       @layout = @getLayout()

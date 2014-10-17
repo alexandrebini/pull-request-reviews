@@ -1,4 +1,4 @@
-@PullRequestsReviews.module 'ReviewApp', (ReviewApp, App, Backbone, Marionette, $, _) ->
+@Reviwr.module 'ReviewApp', (ReviewApp, App, Backbone, Marionette, $, _) ->
   @startWithParent = false
 
   class ReviewApp.Router extends Marionette.AppRouter
