@@ -7,7 +7,9 @@
 
   API =
     getRepositories: ->
+      console.log '0222'
       repositories = new Entities.Repositories()
+      console.log repositories
       repositories.fetch()
       repositories
 
@@ -17,6 +19,7 @@
       repository
 
   App.reqres.setHandler 'repository:entities' ->
+    console.log '919291912192129129'
     API.getRepositories()
 
   App.reqres.setHandler 'repository:entity', (pullRequest) ->

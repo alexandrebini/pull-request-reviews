@@ -3,7 +3,7 @@
 
   class PullRequestsApp.Router extends Marionette.AppRouter
     appRoutes:
-      '' : 'list'
+      'pull-requests/' : 'list'
 
   API =
     start: ->

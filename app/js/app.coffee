@@ -13,9 +13,9 @@
 
   App.addInitializer ->
     App.module('HeaderApp').start()
+    App.module('RepositoriesApp').start()
     App.module('PullRequestsApp').start()
     App.module('ReviewApp').start()
-    App.module('RepositoriesApp').start()
 
   App.commands.setHandler 'register:instance', (instance, id) ->
     App.register instance, id if App.environment is 'development'

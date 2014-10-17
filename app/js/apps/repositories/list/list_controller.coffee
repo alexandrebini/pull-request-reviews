@@ -4,9 +4,11 @@
       @layout = @getLayout()
       @repositories = App.request 'repository:entities'
 
-      @listenTo @layout, 'show', =>
-        App.execute 'when:fetched', @repositories, =>
-          @repositoriesRegion()
+      console.log @repositories
+
+      # @listenTo @layout, 'show', =>
+      #   App.execute 'when:fetched', @repositories, =>
+      #     @repositoriesRegion()
 
       App.mainRegion.show @layout
 

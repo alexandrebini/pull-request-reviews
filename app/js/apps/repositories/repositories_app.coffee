@@ -3,7 +3,7 @@
 
   class RepositoriesApp.Router extends Marionette.AppRouter
     appRoutes:
-      '/repositories/' : 'list'
+      'repositories/' : 'list'
 
   API =
     start: ->
